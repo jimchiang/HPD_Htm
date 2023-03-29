@@ -1,0 +1,1313 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+	<html>
+		<head>
+			<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+			<style type="text/css">
+				<!--/*
+Licensed Materials - Property of IBM
+
+
+
+IBM SPSS Products: Data Collection
+
+(C) Copyright IBM Corp. 2001, 2013
+
+US Government Users Restricted Rights - Use, duplication or disclosure restricted by GSA ADP 
+Schedule Contract with IBM Corp.
+*/
+BODY
+{
+    BACKGROUND-IMAGE: none;
+    BACKGROUND-REPEAT: repeat;
+    BACKGROUND-COLOR: #94BEE7;
+}
+
+TABLE
+{
+    BORDER-COLLAPSE: collapse;
+}
+
+TD.Cell
+{
+    PADDING-TOP: 1px;
+    PADDING-RIGHT: 1px;
+    PADDING-LEFT:1px;
+    BORDER-RIGHT: black 0.5pt solid;
+    BORDER-TOP: black 0.5pt solid;
+    BORDER-LEFT: black 0.5pt solid;
+    BORDER-BOTTOM: black 0.5pt solid;
+    FONT-WEIGHT: normal;
+    FONT-SIZE: 8pt;
+    FONT-STYLE: normal;
+    FONT-FAMILY: Arial, sans-serif;
+    COLOR: windowtext;
+    VERTICAL-ALIGN: middle;
+    TEXT-ALIGN: center;
+    TEXT-DECORATION: none;
+    BACKGROUND: #ffffcc;
+    WIDTH: 70px;
+}
+TD.CellTop
+{
+    BORDER-BOTTOM: none;
+}
+TD.CellBottom
+{
+    BORDER-TOP: none;
+}
+TD.CellMiddle
+{
+    BORDER-TOP: none;
+    BORDER-BOTTOM: none;
+}
+TD.CellTopBottom
+{
+}
+TD.CellElementCategory,
+TD.CellElementTableStatistic,
+TD.CellElementMean,
+TD.CellElementStdDev,
+TD.CellElementStdErr,
+TD.CellElementSampleVar,
+TD.CellElementTotal,
+TD.CellElementSubTotal,
+TD.CellElementText,
+TD.CellElementNetDiffs,
+TD.CellElementPairedPrefs,
+TD.CellElementMinimum,
+TD.CellElementMaximum,
+TD.CellElementOtherDerived,
+TD.CellElementNet,
+TD.CellElementCombine,
+TD.CellElementExpression,
+TD.CellElementNumeric,
+TD.CellElementDerived,
+TD.CellElementSum,
+TD.CellElementMedian,
+TD.CellElementPercentile,
+TD.CellElementMode,
+TD.CellElementProfile,
+TD.CellElementProfileResult,
+TD.CellElementTValue,
+TD.CellElementTProb
+{
+}
+TD.CellElementBase,
+TD.CellElementEffectiveBase,
+TD.CellElementUnweightedBase
+{
+    FONT-WEIGHT: bold;
+}
+TD.CellItemCount,
+TD.CellItemUnweightedCounts,
+TD.CellItemSum,
+TD.CellItemMinimum,
+TD.CellItemMaximum,
+TD.CellItemMean,
+TD.CellItemRange,
+TD.CellItemMode,
+TD.CellItemMedian,
+TD.CellItemPercentile,
+TD.CellItemStdDev,
+TD.CellItemStdErr,
+TD.CellItemVariance,
+TD.CellItemResiduals,
+TD.CellItemAdjustedResiduals,
+TD.CellItemExpectedValues,
+TD.CellItemValidN,
+TD.CellItemIndices,
+TD.CellItemColPropResults,
+TD.CellItemColBase,
+TD.CellItemRowBase
+{
+}
+TD.CellItemColPercent,
+TD.CellItemRowPercent,
+TD.CellItemTotalPercent,
+TD.CellItemCumColPercent,
+TD.CellItemCumRowPercent
+{
+   FONT-STYLE: italic; 
+}
+TD.CellItemProfileResult
+{
+    TEXT-ALIGN: left;
+    VERTICAL-ALIGN: top;
+    WIDTH: auto;
+}
+
+TD.Axis
+{
+    PADDING-TOP: 1px;
+    PADDING-RIGHT: 2px;
+    PADDING-LEFT:2px;
+    BORDER-RIGHT: black 1pt solid;
+    BORDER-TOP: black 1pt solid;
+    BORDER-LEFT: black 1pt solid;
+    BORDER-BOTTOM: black 1pt solid;
+    FONT-WEIGHT: normal;
+    FONT-SIZE: 8pt;
+    FONT-STYLE: normal;
+    FONT-FAMILY: Arial, sans-serif;
+    COLOR: windowtext;
+    VERTICAL-ALIGN: middle;
+    TEXT-ALIGN: center;
+    TEXT-DECORATION: none;
+    BACKGROUND: #ffffcc;
+}
+TD.AxisLabelTop
+{
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 11pt;
+    FONT-STYLE: normal;
+    FONT-FAMILY: Arial, sans-serif;
+}
+TD.AxisLabelSide
+{
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 11pt;
+    FONT-STYLE: normal;
+    FONT-FAMILY: Arial, sans-serif;
+    WRITING-MODE: tb-rl;
+}
+TD.AxisLabelHorizontalSide
+{
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 11pt;
+    FONT-STYLE: normal;
+    FONT-FAMILY: Arial, sans-serif;
+    TEXT-ALIGN: left;
+}
+TD.AxisLabelIndentSide
+{
+}
+TD.AxisElementTop
+{
+    FONT-WEIGHT: normal;
+    FONT-SIZE: 9pt;
+    FONT-STYLE: normal;
+    FONT-FAMILY: Arial, sans-serif;
+}
+TD.AxisElementSide
+{
+    FONT-WEIGHT: normal;
+    FONT-SIZE: 9pt;
+    FONT-STYLE: normal;
+    FONT-FAMILY: Arial, sans-serif;
+    TEXT-ALIGN: left;
+}
+TD.AxisSubElementLevel1Top
+{
+    FONT-WEIGHT: normal;
+    FONT-SIZE: 8pt;
+    FONT-STYLE: italic;
+    FONT-FAMILY: Arial, sans-serif;
+}
+TD.AxisSubElementLevel2Top
+{
+    FONT-WEIGHT: normal;
+    FONT-SIZE: 7pt;
+    FONT-STYLE: normal;
+    FONT-FAMILY: Arial, sans-serif;
+}
+TD.AxisSubElementLevel3Top
+{
+    FONT-WEIGHT: normal;
+    FONT-SIZE: 7pt;
+    FONT-STYLE: italic;
+    FONT-FAMILY: Arial, sans-serif;
+}
+TD.AxisSubElementLevel4Top
+{
+    FONT-WEIGHT: normal;
+    FONT-SIZE: 6pt;
+    FONT-STYLE: normal;
+    FONT-FAMILY: Arial, sans-serif;
+}
+TD.AxisSubElementLevel5Top
+{
+    FONT-WEIGHT: normal;
+    FONT-SIZE: 6pt;
+    FONT-STYLE: italic;
+    FONT-FAMILY: Arial, sans-serif;
+}
+TD.AxisSubElementLevel1Side
+{
+    FONT-WEIGHT: normal;
+    FONT-SIZE: 8pt;
+    FONT-STYLE: italic;
+    FONT-FAMILY: Arial, sans-serif;
+    TEXT-ALIGN: left;
+    PADDING-LEFT:10px;
+}
+TD.AxisSubElementLevel2Side
+{
+    FONT-WEIGHT: normal;
+    FONT-SIZE: 7pt;
+    FONT-STYLE: normal;
+    FONT-FAMILY: Arial, sans-serif;
+    TEXT-ALIGN: left;
+    PADDING-LEFT:20px;
+}
+TD.AxisSubElementLevel3Side
+{
+    FONT-WEIGHT: normal;
+    FONT-SIZE: 7pt;
+    FONT-STYLE: italic;
+    FONT-FAMILY: Arial, sans-serif;
+    TEXT-ALIGN: left;
+    PADDING-LEFT:30px;
+}
+TD.AxisSubElementLevel4Side
+{
+    FONT-WEIGHT: normal;
+    FONT-SIZE: 6pt;
+    FONT-STYLE: normal;
+    FONT-FAMILY: Arial, sans-serif;
+    TEXT-ALIGN: left;
+    PADDING-LEFT:40px;
+}
+TD.AxisSubElementLevel5Side
+{
+    FONT-WEIGHT: normal;
+    FONT-SIZE: 6pt;
+    FONT-STYLE: italic;
+    FONT-FAMILY: Arial, sans-serif;
+    TEXT-ALIGN: left;
+    PADDING-LEFT:50px;
+}
+TD.AxisElementCategory,
+TD.AxisElementTableStatistic,
+TD.AxisElementMean,
+TD.AxisElementStdDev,
+TD.AxisElementStdErr,
+TD.AxisElementSampleVar,
+TD.AxisElementTotal,
+TD.AxisElementSubTotal,
+TD.AxisElementText,
+TD.AxisElementNetDiffs,
+TD.AxisElementPairedPrefs,
+TD.AxisElementMinimum,
+TD.AxisElementMaximum,
+TD.AxisElementOtherDerived,
+TD.AxisElementNet,
+TD.AxisElementCombine,
+TD.AxisElementExpression,
+TD.AxisElementNumeric,
+TD.AxisElementDerived,
+TD.AxisElementSum,
+TD.AxisElementMedian,
+TD.AxisElementPercentile,
+TD.AxisElementMode,
+TD.AxisElementProfile,
+TD.AxisElementProfileResult,
+TD.AxisElementTValue,
+TD.AxisElementTProb
+{
+}
+TD.AxisElementBase,
+TD.AxisElementEffectiveBase,
+TD.AxisElementUnweightedBase
+{
+    FONT-WEIGHT: bold;
+}
+
+TD.AxisColumnHeading
+{
+    FONT-WEIGHT: bold;
+}
+
+TD.AxisElementSortedOn
+{
+}
+
+TD.TableOfContents
+{
+    PADDING-TOP: 2px;
+    PADDING-RIGHT: 2px;
+    PADDING-LEFT:2px;
+    BORDER: black 0.5pt solid;
+    FONT-WEIGHT: normal;
+    FONT-SIZE: 8pt;
+    FONT-STYLE: normal;
+    FONT-FAMILY: Arial, sans-serif;
+    COLOR: windowtext;
+    VERTICAL-ALIGN: middle;
+    TEXT-ALIGN: left;
+    TEXT-DECORATION: none;
+    BACKGROUND: #ffffcc;
+}
+TD.TableOfContentsTitle
+{
+    PADDING-TOP: 2px;
+    PADDING-RIGHT: 2px;
+    PADDING-LEFT:2px;
+    BORDER: black 0.5pt solid;
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 8pt;
+    FONT-STYLE: normal;
+    FONT-FAMILY: Arial, sans-serif;
+    COLOR: windowtext;
+    VERTICAL-ALIGN: middle;
+    TEXT-ALIGN: left;
+    TEXT-DECORATION: none;
+    BACKGROUND: #ffffaa;
+}
+
+TD.Annotation
+{
+    VERTICAL-ALIGN: top;
+    FONT-WEIGHT: normal;
+    FONT-SIZE: 10pt;
+    FONT-STYLE: normal;
+    FONT-FAMILY: Arial, sans-serif;
+}
+TD.TitleHeader
+{
+    TEXT-ALIGN: left;
+    FONT-SIZE: 12pt;
+    FONT-WEIGHT: bold;
+}
+TD.LeftHeader
+{
+    WIDTH: 30%;
+    TEXT-ALIGN: left;
+}
+TD.CenterHeader
+{
+    WIDTH: 40%;
+    TEXT-ALIGN: center;
+}
+TD.RightHeader
+{
+    WIDTH: 30%;
+    TEXT-ALIGN: right;
+}
+TD.TitleFooter
+{
+    TEXT-ALIGN: left;
+    FONT-SIZE: 10pt;
+    FONT-WEIGHT: bold;
+}
+TD.LeftFooter
+{
+    WIDTH: 30%;
+    TEXT-ALIGN: left;
+}
+TD.CenterFooter
+{
+    WIDTH: 40%;
+    TEXT-ALIGN: center;
+}
+TD.RightFooter
+{
+    WIDTH: 30%;
+    TEXT-ALIGN: right;
+}
+
+A.TopLink
+{
+    FONT-WEIGHT: normal;
+    FONT-SIZE: 6pt;
+    FONT-STYLE: normal;
+    FONT-FAMILY: Arial, sans-serif;
+}
+
+H1.SurveyName
+{
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 12pt;
+    FONT-STYLE: normal;
+    FONT-FAMILY: Arial, sans-serif;
+}
+H1.SurveyDescription
+{
+    FONT-WEIGHT: normal;
+    FONT-SIZE: 12pt;
+    FONT-STYLE: normal;
+    FONT-FAMILY: Arial, sans-serif;
+}
+
+IMG.TableImage
+{
+    BACKGROUND-COLOR: white;
+    BORDER: black 0.5pt solid;
+}
+
+IMG.TableLogo
+{
+    BACKGROUND-COLOR: transparent;
+}
+
+.HorizontalSpacer
+{
+    HEIGHT: 5px
+}
+.VerticalSpacer
+{
+    WIDTH: 5px
+}-->
+			</style>
+		</head>
+		<body>
+			<table width="100%">
+				<tr>
+					<td>
+						<img align="right" class="TableLogo" src="../logo.png"/>
+					</td>
+				</tr>
+			</table>
+			<table width="100%" cellpadding="0" cellspacing="0">
+				<tr>
+					<td colspan="3" class="Annotation TitleHeader">HPD (NYC) - Mar. 2023</td>
+				</tr>
+				<tr>
+					<td class="Annotation LeftHeader">DateEntered. Date Entered By Inspection Time</td>
+					<td class="Annotation CenterHeader">Table: 4<BR/></td>
+					<td class="Annotation RightHeader">Name: std_DateEntered_YYYY2_Val<BR/></td>
+				</tr>
+			</table>
+			<br/>
+			<table cellpadding="0" cellspacing="0">
+				<tr>
+					<td colspan="2" rowspan="3" class="None"> </td>
+					<td colspan="3" class="Axis AxisLabelTop">Status</td>
+					<td colspan="3" class="Axis AxisLabelTop">Inspection Time</td>
+					<td colspan="6" class="Axis AxisLabelTop">Borough</td>
+					<td colspan="9" class="Axis AxisLabelTop">Date Entered</td>
+				</tr>
+				<tr>
+					<td class="Axis AxisElementTop AxisElementBase">Total</td>
+					<td class="Axis AxisElementTop AxisElementCategory">Active</td>
+					<td class="Axis AxisElementTop AxisElementCategory">Closed</td>
+					<td class="Axis AxisElementTop AxisElementMean">Mean</td>
+					<td class="Axis AxisElementTop AxisElementMean">Mean - Active</td>
+					<td class="Axis AxisElementTop AxisElementMean">Mean - Closed</td>
+					<td class="Axis AxisElementTop AxisElementCategory">Manhattan</td>
+					<td class="Axis AxisElementTop AxisElementCategory">Bronx</td>
+					<td class="Axis AxisElementTop AxisElementCategory">Brooklyn</td>
+					<td class="Axis AxisElementTop AxisElementCategory">Queens</td>
+					<td class="Axis AxisElementTop AxisElementCategory">Staten Island</td>
+					<td class="Axis AxisElementTop AxisElementCategory">Undefined</td>
+					<td class="Axis AxisElementTop AxisElementCategory">2015</td>
+					<td class="Axis AxisElementTop AxisElementCategory">2016</td>
+					<td class="Axis AxisElementTop AxisElementCategory">2017</td>
+					<td class="Axis AxisElementTop AxisElementCategory">2018</td>
+					<td class="Axis AxisElementTop AxisElementCategory">2019</td>
+					<td class="Axis AxisElementTop AxisElementCategory">2020</td>
+					<td class="Axis AxisElementTop AxisElementCategory">2021</td>
+					<td class="Axis AxisElementTop AxisElementCategory">2022</td>
+					<td class="Axis AxisElementTop AxisElementCategory">2023</td>
+				</tr>
+				<tr>
+					<td class="Axis AxisColumnHeading"> </td>
+					<td class="Axis AxisColumnHeading">B</td>
+					<td class="Axis AxisColumnHeading">C</td>
+					<td class="Axis AxisColumnHeading">D</td>
+					<td class="Axis AxisColumnHeading">E</td>
+					<td class="Axis AxisColumnHeading">F</td>
+					<td class="Axis AxisColumnHeading">G</td>
+					<td class="Axis AxisColumnHeading">H</td>
+					<td class="Axis AxisColumnHeading">I</td>
+					<td class="Axis AxisColumnHeading">J</td>
+					<td class="Axis AxisColumnHeading">K</td>
+					<td class="Axis AxisColumnHeading">L</td>
+					<td class="Axis AxisColumnHeading">M</td>
+					<td class="Axis AxisColumnHeading">N</td>
+					<td class="Axis AxisColumnHeading">O</td>
+					<td class="Axis AxisColumnHeading">P</td>
+					<td class="Axis AxisColumnHeading">Q</td>
+					<td class="Axis AxisColumnHeading">R</td>
+					<td class="Axis AxisColumnHeading">S</td>
+					<td class="Axis AxisColumnHeading">T</td>
+					<td class="Axis AxisColumnHeading">U</td>
+				</tr>
+				<tr>
+					<td class="HorizontalSpacer"/>
+				</tr>
+				<tr>
+					<td colspan="23" class="Axis AxisLabelHorizontalSide"> </td>
+				</tr>
+				<tr>
+					<td rowspan="33" class="Axis AxisLabelIndentSide"> </td>
+					<td rowspan="3" class="Axis AxisElementSide AxisElementBase">Total</td>
+					<td class="Cell CellTop CellItemCount CellElementBase">1692389</td>
+					<td class="Cell CellTop CellItemCount CellElementCategory CellElementBase">615302</td>
+					<td class="Cell CellTop CellItemCount CellElementCategory CellElementBase">1077087</td>
+					<td class="Cell CellTop CellItemCount CellElementMean CellElementBase">43.4</td>
+					<td class="Cell CellTop CellItemCount CellElementMean CellElementBase">36.2</td>
+					<td class="Cell CellTop CellItemCount CellElementMean CellElementBase">44.9</td>
+					<td class="Cell CellTop CellItemCount CellElementCategory CellElementBase">294342</td>
+					<td class="Cell CellTop CellItemCount CellElementCategory CellElementBase">174766</td>
+					<td class="Cell CellTop CellItemCount CellElementCategory CellElementBase">409034</td>
+					<td class="Cell CellTop CellItemCount CellElementCategory CellElementBase">248702</td>
+					<td class="Cell CellTop CellItemCount CellElementCategory CellElementBase">28605</td>
+					<td class="Cell CellTop CellItemCount CellElementCategory CellElementBase">536940</td>
+					<td class="Cell CellTop CellItemCount CellElementCategory CellElementBase">105761</td>
+					<td class="Cell CellTop CellItemCount CellElementCategory CellElementBase">119159</td>
+					<td class="Cell CellTop CellItemCount CellElementCategory CellElementBase">134067</td>
+					<td class="Cell CellTop CellItemCount CellElementCategory CellElementBase">172083</td>
+					<td class="Cell CellTop CellItemCount CellElementCategory CellElementBase">316491</td>
+					<td class="Cell CellTop CellItemCount CellElementCategory CellElementBase">262882</td>
+					<td class="Cell CellTop CellItemCount CellElementCategory CellElementBase">261450</td>
+					<td class="Cell CellTop CellItemCount CellElementCategory CellElementBase">271562</td>
+					<td class="Cell CellTop CellItemCount CellElementCategory CellElementBase">48934</td>
+				</tr>
+				<tr>
+					<td class="Cell CellMiddle CellItemColPercent CellElementBase">100.0%</td>
+					<td class="Cell CellMiddle CellItemColPercent CellElementCategory CellElementBase">100.0%</td>
+					<td class="Cell CellMiddle CellItemColPercent CellElementCategory CellElementBase">100.0%</td>
+					<td class="Cell CellMiddle CellItemColPercent CellElementMean CellElementBase"> </td>
+					<td class="Cell CellMiddle CellItemColPercent CellElementMean CellElementBase"> </td>
+					<td class="Cell CellMiddle CellItemColPercent CellElementMean CellElementBase"> </td>
+					<td class="Cell CellMiddle CellItemColPercent CellElementCategory CellElementBase">100.0%</td>
+					<td class="Cell CellMiddle CellItemColPercent CellElementCategory CellElementBase">100.0%</td>
+					<td class="Cell CellMiddle CellItemColPercent CellElementCategory CellElementBase">100.0%</td>
+					<td class="Cell CellMiddle CellItemColPercent CellElementCategory CellElementBase">100.0%</td>
+					<td class="Cell CellMiddle CellItemColPercent CellElementCategory CellElementBase">100.0%</td>
+					<td class="Cell CellMiddle CellItemColPercent CellElementCategory CellElementBase">100.0%</td>
+					<td class="Cell CellMiddle CellItemColPercent CellElementCategory CellElementBase">100.0%</td>
+					<td class="Cell CellMiddle CellItemColPercent CellElementCategory CellElementBase">100.0%</td>
+					<td class="Cell CellMiddle CellItemColPercent CellElementCategory CellElementBase">100.0%</td>
+					<td class="Cell CellMiddle CellItemColPercent CellElementCategory CellElementBase">100.0%</td>
+					<td class="Cell CellMiddle CellItemColPercent CellElementCategory CellElementBase">100.0%</td>
+					<td class="Cell CellMiddle CellItemColPercent CellElementCategory CellElementBase">100.0%</td>
+					<td class="Cell CellMiddle CellItemColPercent CellElementCategory CellElementBase">100.0%</td>
+					<td class="Cell CellMiddle CellItemColPercent CellElementCategory CellElementBase">100.0%</td>
+					<td class="Cell CellMiddle CellItemColPercent CellElementCategory CellElementBase">100.0%</td>
+				</tr>
+				<tr>
+					<td class="Cell CellBottom CellItemColPropResults CellElementBase"> </td>
+					<td class="Cell CellBottom CellItemColPropResults CellElementCategory CellElementBase"> </td>
+					<td class="Cell CellBottom CellItemColPropResults CellElementCategory CellElementBase"> </td>
+					<td class="Cell CellBottom CellItemColPropResults CellElementMean CellElementBase"> </td>
+					<td class="Cell CellBottom CellItemColPropResults CellElementMean CellElementBase"> </td>
+					<td class="Cell CellBottom CellItemColPropResults CellElementMean CellElementBase"> </td>
+					<td class="Cell CellBottom CellItemColPropResults CellElementCategory CellElementBase"> </td>
+					<td class="Cell CellBottom CellItemColPropResults CellElementCategory CellElementBase"> </td>
+					<td class="Cell CellBottom CellItemColPropResults CellElementCategory CellElementBase"> </td>
+					<td class="Cell CellBottom CellItemColPropResults CellElementCategory CellElementBase"> </td>
+					<td class="Cell CellBottom CellItemColPropResults CellElementCategory CellElementBase"> </td>
+					<td class="Cell CellBottom CellItemColPropResults CellElementCategory CellElementBase"> </td>
+					<td class="Cell CellBottom CellItemColPropResults CellElementCategory CellElementBase"> </td>
+					<td class="Cell CellBottom CellItemColPropResults CellElementCategory CellElementBase"> </td>
+					<td class="Cell CellBottom CellItemColPropResults CellElementCategory CellElementBase"> </td>
+					<td class="Cell CellBottom CellItemColPropResults CellElementCategory CellElementBase"> </td>
+					<td class="Cell CellBottom CellItemColPropResults CellElementCategory CellElementBase"> </td>
+					<td class="Cell CellBottom CellItemColPropResults CellElementCategory CellElementBase"> </td>
+					<td class="Cell CellBottom CellItemColPropResults CellElementCategory CellElementBase"> </td>
+					<td class="Cell CellBottom CellItemColPropResults CellElementCategory CellElementBase"> </td>
+					<td class="Cell CellBottom CellItemColPropResults CellElementCategory CellElementBase"> </td>
+				</tr>
+				<tr>
+					<td rowspan="3" class="Axis AxisElementSide AxisElementCategory">2015</td>
+					<td class="Cell CellTop CellItemCount CellElementBase CellElementCategory">105761</td>
+					<td class="Cell CellTop CellItemCount CellElementCategory">1216</td>
+					<td class="Cell CellTop CellItemCount CellElementCategory">104545</td>
+					<td class="Cell CellTop CellItemCount CellElementMean CellElementCategory">79.2</td>
+					<td class="Cell CellTop CellItemCount CellElementMean CellElementCategory">38.6</td>
+					<td class="Cell CellTop CellItemCount CellElementMean CellElementCategory">79.4</td>
+					<td class="Cell CellTop CellItemCount CellElementCategory">21159</td>
+					<td class="Cell CellTop CellItemCount CellElementCategory">10610</td>
+					<td class="Cell CellTop CellItemCount CellElementCategory">26450</td>
+					<td class="Cell CellTop CellItemCount CellElementCategory">16573</td>
+					<td class="Cell CellTop CellItemCount CellElementCategory">1771</td>
+					<td class="Cell CellTop CellItemCount CellElementCategory">29198</td>
+					<td class="Cell CellTop CellItemCount CellElementCategory">105761</td>
+					<td class="Cell CellTop CellItemCount CellElementCategory">-</td>
+					<td class="Cell CellTop CellItemCount CellElementCategory">-</td>
+					<td class="Cell CellTop CellItemCount CellElementCategory">-</td>
+					<td class="Cell CellTop CellItemCount CellElementCategory">-</td>
+					<td class="Cell CellTop CellItemCount CellElementCategory">-</td>
+					<td class="Cell CellTop CellItemCount CellElementCategory">-</td>
+					<td class="Cell CellTop CellItemCount CellElementCategory">-</td>
+					<td class="Cell CellTop CellItemCount CellElementCategory">-</td>
+				</tr>
+				<tr>
+					<td class="Cell CellMiddle CellItemColPercent CellElementBase CellElementCategory">6.2%</td>
+					<td class="Cell CellMiddle CellItemColPercent CellElementCategory">0.2%</td>
+					<td class="Cell CellMiddle CellItemColPercent CellElementCategory">9.7%</td>
+					<td class="Cell CellMiddle CellItemColPercent CellElementMean CellElementCategory"> </td>
+					<td class="Cell CellMiddle CellItemColPercent CellElementMean CellElementCategory"> </td>
+					<td class="Cell CellMiddle CellItemColPercent CellElementMean CellElementCategory"> </td>
+					<td class="Cell CellMiddle CellItemColPercent CellElementCategory">7.2%</td>
+					<td class="Cell CellMiddle CellItemColPercent CellElementCategory">6.1%</td>
+					<td class="Cell CellMiddle CellItemColPercent CellElementCategory">6.5%</td>
+					<td class="Cell CellMiddle CellItemColPercent CellElementCategory">6.7%</td>
+					<td class="Cell CellMiddle CellItemColPercent CellElementCategory">6.2%</td>
+					<td class="Cell CellMiddle CellItemColPercent CellElementCategory">5.4%</td>
+					<td class="Cell CellMiddle CellItemColPercent CellElementCategory">100.0%</td>
+					<td class="Cell CellMiddle CellItemColPercent CellElementCategory">-</td>
+					<td class="Cell CellMiddle CellItemColPercent CellElementCategory">-</td>
+					<td class="Cell CellMiddle CellItemColPercent CellElementCategory">-</td>
+					<td class="Cell CellMiddle CellItemColPercent CellElementCategory">-</td>
+					<td class="Cell CellMiddle CellItemColPercent CellElementCategory">-</td>
+					<td class="Cell CellMiddle CellItemColPercent CellElementCategory">-</td>
+					<td class="Cell CellMiddle CellItemColPercent CellElementCategory">-</td>
+					<td class="Cell CellMiddle CellItemColPercent CellElementCategory">-</td>
+				</tr>
+				<tr>
+					<td class="Cell CellBottom CellItemColPropResults CellElementBase CellElementCategory"> </td>
+					<td class="Cell CellBottom CellItemColPropResults CellElementCategory"> </td>
+					<td class="Cell CellBottom CellItemColPropResults CellElementCategory">B</td>
+					<td class="Cell CellBottom CellItemColPropResults CellElementMean CellElementCategory"> </td>
+					<td class="Cell CellBottom CellItemColPropResults CellElementMean CellElementCategory"> </td>
+					<td class="Cell CellBottom CellItemColPropResults CellElementMean CellElementCategory"> </td>
+					<td class="Cell CellBottom CellItemColPropResults CellElementCategory">HIJKL</td>
+					<td class="Cell CellBottom CellItemColPropResults CellElementCategory">L</td>
+					<td class="Cell CellBottom CellItemColPropResults CellElementCategory">HL</td>
+					<td class="Cell CellBottom CellItemColPropResults CellElementCategory">HIKL</td>
+					<td class="Cell CellBottom CellItemColPropResults CellElementCategory">L</td>
+					<td class="Cell CellBottom CellItemColPropResults CellElementCategory"> </td>
+					<td class="Cell CellBottom CellItemColPropResults CellElementCategory">NOPQRSTU</td>
+					<td class="Cell CellBottom CellItemColPropResults CellElementCategory"> </td>
+					<td class="Cell CellBottom CellItemColPropResults CellElementCategory"> </td>
+					<td class="Cell CellBottom CellItemColPropResults CellElementCategory"> </td>
+					<td class="Cell CellBottom CellItemColPropResults CellElementCategory"> </td>
+					<td class="Cell CellBottom CellItemColPropResults CellElementCategory"> </td>
+					<td class="Cell CellBottom CellItemColPropResults CellElementCategory"> </td>
+					<td class="Cell CellBottom CellItemColPropResults CellElementCategory"> </td>
+					<td class="Cell CellBottom CellItemColPropResults CellElementCategory"> </td>
+				</tr>
+				<tr>
+					<td rowspan="3" class="Axis AxisElementSide AxisElementCategory">2016</td>
+					<td class="Cell CellTop CellItemCount CellElementBase CellElementCategory">119159</td>
+					<td class="Cell CellTop CellItemCount CellElementCategory">1320</td>
+					<td class="Cell CellTop CellItemCount CellElementCategory">117839</td>
+					<td class="Cell CellTop CellItemCount CellElementMean CellElementCategory">60.7</td>
+					<td class="Cell CellTop CellItemCount CellElementMean CellElementCategory">93.1</td>
+					<td class="Cell CellTop CellItemCount CellElementMean CellElementCategory">60.5</td>
+					<td class="Cell CellTop CellItemCount CellElementCategory">22111</td>
+					<td class="Cell CellTop CellItemCount CellElementCategory">12441</td>
+					<td class="Cell CellTop CellItemCount CellElementCategory">29407</td>
+					<td class="Cell CellTop CellItemCount CellElementCategory">18651</td>
+					<td class="Cell CellTop CellItemCount CellElementCategory">2224</td>
+					<td class="Cell CellTop CellItemCount CellElementCategory">34325</td>
+					<td class="Cell CellTop CellItemCount CellElementCategory">-</td>
+					<td class="Cell CellTop CellItemCount CellElementCategory">119159</td>
+					<td class="Cell CellTop CellItemCount CellElementCategory">-</td>
+					<td class="Cell CellTop CellItemCount CellElementCategory">-</td>
+					<td class="Cell CellTop CellItemCount CellElementCategory">-</td>
+					<td class="Cell CellTop CellItemCount CellElementCategory">-</td>
+					<td class="Cell CellTop CellItemCount CellElementCategory">-</td>
+					<td class="Cell CellTop CellItemCount CellElementCategory">-</td>
+					<td class="Cell CellTop CellItemCount CellElementCategory">-</td>
+				</tr>
+				<tr>
+					<td class="Cell CellMiddle CellItemColPercent CellElementBase CellElementCategory">7.0%</td>
+					<td class="Cell CellMiddle CellItemColPercent CellElementCategory">0.2%</td>
+					<td class="Cell CellMiddle CellItemColPercent CellElementCategory">10.9%</td>
+					<td class="Cell CellMiddle CellItemColPercent CellElementMean CellElementCategory"> </td>
+					<td class="Cell CellMiddle CellItemColPercent CellElementMean CellElementCategory"> </td>
+					<td class="Cell CellMiddle CellItemColPercent CellElementMean CellElementCategory"> </td>
+					<td class="Cell CellMiddle CellItemColPercent CellElementCategory">7.5%</td>
+					<td class="Cell CellMiddle CellItemColPercent CellElementCategory">7.1%</td>
+					<td class="Cell CellMiddle CellItemColPercent CellElementCategory">7.2%</td>
+					<td class="Cell CellMiddle CellItemColPercent CellElementCategory">7.5%</td>
+					<td class="Cell CellMiddle CellItemColPercent CellElementCategory">7.8%</td>
+					<td class="Cell CellMiddle CellItemColPercent CellElementCategory">6.4%</td>
+					<td class="Cell CellMiddle CellItemColPercent CellElementCategory">-</td>
+					<td class="Cell CellMiddle CellItemColPercent CellElementCategory">100.0%</td>
+					<td class="Cell CellMiddle CellItemColPercent CellElementCategory">-</td>
+					<td class="Cell CellMiddle CellItemColPercent CellElementCategory">-</td>
+					<td class="Cell CellMiddle CellItemColPercent CellElementCategory">-</td>
+					<td class="Cell CellMiddle CellItemColPercent CellElementCategory">-</td>
+					<td class="Cell CellMiddle CellItemColPercent CellElementCategory">-</td>
+					<td class="Cell CellMiddle CellItemColPercent CellElementCategory">-</td>
+					<td class="Cell CellMiddle CellItemColPercent CellElementCategory">-</td>
+				</tr>
+				<tr>
+					<td class="Cell CellBottom CellItemColPropResults CellElementBase CellElementCategory"> </td>
+					<td class="Cell CellBottom CellItemColPropResults CellElementCategory"> </td>
+					<td class="Cell CellBottom CellItemColPropResults CellElementCategory">B</td>
+					<td class="Cell CellBottom CellItemColPropResults CellElementMean CellElementCategory"> </td>
+					<td class="Cell CellBottom CellItemColPropResults CellElementMean CellElementCategory"> </td>
+					<td class="Cell CellBottom CellItemColPropResults CellElementMean CellElementCategory"> </td>
+					<td class="Cell CellBottom CellItemColPropResults CellElementCategory">HIL</td>
+					<td class="Cell CellBottom CellItemColPropResults CellElementCategory">L</td>
+					<td class="Cell CellBottom CellItemColPropResults CellElementCategory">L</td>
+					<td class="Cell CellBottom CellItemColPropResults CellElementCategory">HIL</td>
+					<td class="Cell CellBottom CellItemColPropResults CellElementCategory">HIL</td>
+					<td class="Cell CellBottom CellItemColPropResults CellElementCategory"> </td>
+					<td class="Cell CellBottom CellItemColPropResults CellElementCategory"> </td>
+					<td class="Cell CellBottom CellItemColPropResults CellElementCategory">MOPQRSTU</td>
+					<td class="Cell CellBottom CellItemColPropResults CellElementCategory"> </td>
+					<td class="Cell CellBottom CellItemColPropResults CellElementCategory"> </td>
+					<td class="Cell CellBottom CellItemColPropResults CellElementCategory"> </td>
+					<td class="Cell CellBottom CellItemColPropResults CellElementCategory"> </td>
+					<td class="Cell CellBottom CellItemColPropResults CellElementCategory"> </td>
+					<td class="Cell CellBottom CellItemColPropResults CellElementCategory"> </td>
+					<td class="Cell CellBottom CellItemColPropResults CellElementCategory"> </td>
+				</tr>
+				<tr>
+					<td rowspan="3" class="Axis AxisElementSide AxisElementCategory">2017</td>
+					<td class="Cell CellTop CellItemCount CellElementBase CellElementCategory">134067</td>
+					<td class="Cell CellTop CellItemCount CellElementCategory">3510</td>
+					<td class="Cell CellTop CellItemCount CellElementCategory">130557</td>
+					<td class="Cell CellTop CellItemCount CellElementMean CellElementCategory">48.5</td>
+					<td class="Cell CellTop CellItemCount CellElementMean CellElementCategory">165.2</td>
+					<td class="Cell CellTop CellItemCount CellElementMean CellElementCategory">46.8</td>
+					<td class="Cell CellTop CellItemCount CellElementCategory">23866</td>
+					<td class="Cell CellTop CellItemCount CellElementCategory">14029</td>
+					<td class="Cell CellTop CellItemCount CellElementCategory">31769</td>
+					<td class="Cell CellTop CellItemCount CellElementCategory">21513</td>
+					<td class="Cell CellTop CellItemCount CellElementCategory">2322</td>
+					<td class="Cell CellTop CellItemCount CellElementCategory">40568</td>
+					<td class="Cell CellTop CellItemCount CellElementCategory">-</td>
+					<td class="Cell CellTop CellItemCount CellElementCategory">-</td>
+					<td class="Cell CellTop CellItemCount CellElementCategory">134067</td>
+					<td class="Cell CellTop CellItemCount CellElementCategory">-</td>
+					<td class="Cell CellTop CellItemCount CellElementCategory">-</td>
+					<td class="Cell CellTop CellItemCount CellElementCategory">-</td>
+					<td class="Cell CellTop CellItemCount CellElementCategory">-</td>
+					<td class="Cell CellTop CellItemCount CellElementCategory">-</td>
+					<td class="Cell CellTop CellItemCount CellElementCategory">-</td>
+				</tr>
+				<tr>
+					<td class="Cell CellMiddle CellItemColPercent CellElementBase CellElementCategory">7.9%</td>
+					<td class="Cell CellMiddle CellItemColPercent CellElementCategory">0.6%</td>
+					<td class="Cell CellMiddle CellItemColPercent CellElementCategory">12.1%</td>
+					<td class="Cell CellMiddle CellItemColPercent CellElementMean CellElementCategory"> </td>
+					<td class="Cell CellMiddle CellItemColPercent CellElementMean CellElementCategory"> </td>
+					<td class="Cell CellMiddle CellItemColPercent CellElementMean CellElementCategory"> </td>
+					<td class="Cell CellMiddle CellItemColPercent CellElementCategory">8.1%</td>
+					<td class="Cell CellMiddle CellItemColPercent CellElementCategory">8.0%</td>
+					<td class="Cell CellMiddle CellItemColPercent CellElementCategory">7.8%</td>
+					<td class="Cell CellMiddle CellItemColPercent CellElementCategory">8.7%</td>
+					<td class="Cell CellMiddle CellItemColPercent CellElementCategory">8.1%</td>
+					<td class="Cell CellMiddle CellItemColPercent CellElementCategory">7.6%</td>
+					<td class="Cell CellMiddle CellItemColPercent CellElementCategory">-</td>
+					<td class="Cell CellMiddle CellItemColPercent CellElementCategory">-</td>
+					<td class="Cell CellMiddle CellItemColPercent CellElementCategory">100.0%</td>
+					<td class="Cell CellMiddle CellItemColPercent CellElementCategory">-</td>
+					<td class="Cell CellMiddle CellItemColPercent CellElementCategory">-</td>
+					<td class="Cell CellMiddle CellItemColPercent CellElementCategory">-</td>
+					<td class="Cell CellMiddle CellItemColPercent CellElementCategory">-</td>
+					<td class="Cell CellMiddle CellItemColPercent CellElementCategory">-</td>
+					<td class="Cell CellMiddle CellItemColPercent CellElementCategory">-</td>
+				</tr>
+				<tr>
+					<td class="Cell CellBottom CellItemColPropResults CellElementBase CellElementCategory"> </td>
+					<td class="Cell CellBottom CellItemColPropResults CellElementCategory"> </td>
+					<td class="Cell CellBottom CellItemColPropResults CellElementCategory">B</td>
+					<td class="Cell CellBottom CellItemColPropResults CellElementMean CellElementCategory"> </td>
+					<td class="Cell CellBottom CellItemColPropResults CellElementMean CellElementCategory"> </td>
+					<td class="Cell CellBottom CellItemColPropResults CellElementMean CellElementCategory"> </td>
+					<td class="Cell CellBottom CellItemColPropResults CellElementCategory">IL</td>
+					<td class="Cell CellBottom CellItemColPropResults CellElementCategory">IL</td>
+					<td class="Cell CellBottom CellItemColPropResults CellElementCategory">L</td>
+					<td class="Cell CellBottom CellItemColPropResults CellElementCategory">GHIKL</td>
+					<td class="Cell CellBottom CellItemColPropResults CellElementCategory">IL</td>
+					<td class="Cell CellBottom CellItemColPropResults CellElementCategory"> </td>
+					<td class="Cell CellBottom CellItemColPropResults CellElementCategory"> </td>
+					<td class="Cell CellBottom CellItemColPropResults CellElementCategory"> </td>
+					<td class="Cell CellBottom CellItemColPropResults CellElementCategory">MNPQRSTU</td>
+					<td class="Cell CellBottom CellItemColPropResults CellElementCategory"> </td>
+					<td class="Cell CellBottom CellItemColPropResults CellElementCategory"> </td>
+					<td class="Cell CellBottom CellItemColPropResults CellElementCategory"> </td>
+					<td class="Cell CellBottom CellItemColPropResults CellElementCategory"> </td>
+					<td class="Cell CellBottom CellItemColPropResults CellElementCategory"> </td>
+					<td class="Cell CellBottom CellItemColPropResults CellElementCategory"> </td>
+				</tr>
+				<tr>
+					<td rowspan="3" class="Axis AxisElementSide AxisElementCategory">2018</td>
+					<td class="Cell CellTop CellItemCount CellElementBase CellElementCategory">172083</td>
+					<td class="Cell CellTop CellItemCount CellElementCategory">36278</td>
+					<td class="Cell CellTop CellItemCount CellElementCategory">135805</td>
+					<td class="Cell CellTop CellItemCount CellElementMean CellElementCategory">41.3</td>
+					<td class="Cell CellTop CellItemCount CellElementMean CellElementCategory">61.4</td>
+					<td class="Cell CellTop CellItemCount CellElementMean CellElementCategory">39.4</td>
+					<td class="Cell CellTop CellItemCount CellElementCategory">29632</td>
+					<td class="Cell CellTop CellItemCount CellElementCategory">18099</td>
+					<td class="Cell CellTop CellItemCount CellElementCategory">42312</td>
+					<td class="Cell CellTop CellItemCount CellElementCategory">27423</td>
+					<td class="Cell CellTop CellItemCount CellElementCategory">2542</td>
+					<td class="Cell CellTop CellItemCount CellElementCategory">52075</td>
+					<td class="Cell CellTop CellItemCount CellElementCategory">-</td>
+					<td class="Cell CellTop CellItemCount CellElementCategory">-</td>
+					<td class="Cell CellTop CellItemCount CellElementCategory">-</td>
+					<td class="Cell CellTop CellItemCount CellElementCategory">172083</td>
+					<td class="Cell CellTop CellItemCount CellElementCategory">-</td>
+					<td class="Cell CellTop CellItemCount CellElementCategory">-</td>
+					<td class="Cell CellTop CellItemCount CellElementCategory">-</td>
+					<td class="Cell CellTop CellItemCount CellElementCategory">-</td>
+					<td class="Cell CellTop CellItemCount CellElementCategory">-</td>
+				</tr>
+				<tr>
+					<td class="Cell CellMiddle CellItemColPercent CellElementBase CellElementCategory">10.2%</td>
+					<td class="Cell CellMiddle CellItemColPercent CellElementCategory">5.9%</td>
+					<td class="Cell CellMiddle CellItemColPercent CellElementCategory">12.6%</td>
+					<td class="Cell CellMiddle CellItemColPercent CellElementMean CellElementCategory"> </td>
+					<td class="Cell CellMiddle CellItemColPercent CellElementMean CellElementCategory"> </td>
+					<td class="Cell CellMiddle CellItemColPercent CellElementMean CellElementCategory"> </td>
+					<td class="Cell CellMiddle CellItemColPercent CellElementCategory">10.1%</td>
+					<td class="Cell CellMiddle CellItemColPercent CellElementCategory">10.4%</td>
+					<td class="Cell CellMiddle CellItemColPercent CellElementCategory">10.3%</td>
+					<td class="Cell CellMiddle CellItemColPercent CellElementCategory">11.0%</td>
+					<td class="Cell CellMiddle CellItemColPercent CellElementCategory">8.9%</td>
+					<td class="Cell CellMiddle CellItemColPercent CellElementCategory">9.7%</td>
+					<td class="Cell CellMiddle CellItemColPercent CellElementCategory">-</td>
+					<td class="Cell CellMiddle CellItemColPercent CellElementCategory">-</td>
+					<td class="Cell CellMiddle CellItemColPercent CellElementCategory">-</td>
+					<td class="Cell CellMiddle CellItemColPercent CellElementCategory">100.0%</td>
+					<td class="Cell CellMiddle CellItemColPercent CellElementCategory">-</td>
+					<td class="Cell CellMiddle CellItemColPercent CellElementCategory">-</td>
+					<td class="Cell CellMiddle CellItemColPercent CellElementCategory">-</td>
+					<td class="Cell CellMiddle CellItemColPercent CellElementCategory">-</td>
+					<td class="Cell CellMiddle CellItemColPercent CellElementCategory">-</td>
+				</tr>
+				<tr>
+					<td class="Cell CellBottom CellItemColPropResults CellElementBase CellElementCategory"> </td>
+					<td class="Cell CellBottom CellItemColPropResults CellElementCategory"> </td>
+					<td class="Cell CellBottom CellItemColPropResults CellElementCategory">B</td>
+					<td class="Cell CellBottom CellItemColPropResults CellElementMean CellElementCategory"> </td>
+					<td class="Cell CellBottom CellItemColPropResults CellElementMean CellElementCategory"> </td>
+					<td class="Cell CellBottom CellItemColPropResults CellElementMean CellElementCategory"> </td>
+					<td class="Cell CellBottom CellItemColPropResults CellElementCategory">KL</td>
+					<td class="Cell CellBottom CellItemColPropResults CellElementCategory">GKL</td>
+					<td class="Cell CellBottom CellItemColPropResults CellElementCategory">GKL</td>
+					<td class="Cell CellBottom CellItemColPropResults CellElementCategory">GHIKL</td>
+					<td class="Cell CellBottom CellItemColPropResults CellElementCategory"> </td>
+					<td class="Cell CellBottom CellItemColPropResults CellElementCategory">K</td>
+					<td class="Cell CellBottom CellItemColPropResults CellElementCategory"> </td>
+					<td class="Cell CellBottom CellItemColPropResults CellElementCategory"> </td>
+					<td class="Cell CellBottom CellItemColPropResults CellElementCategory"> </td>
+					<td class="Cell CellBottom CellItemColPropResults CellElementCategory">MNOQRSTU</td>
+					<td class="Cell CellBottom CellItemColPropResults CellElementCategory"> </td>
+					<td class="Cell CellBottom CellItemColPropResults CellElementCategory"> </td>
+					<td class="Cell CellBottom CellItemColPropResults CellElementCategory"> </td>
+					<td class="Cell CellBottom CellItemColPropResults CellElementCategory"> </td>
+					<td class="Cell CellBottom CellItemColPropResults CellElementCategory"> </td>
+				</tr>
+				<tr>
+					<td rowspan="3" class="Axis AxisElementSide AxisElementCategory">2019</td>
+					<td class="Cell CellTop CellItemCount CellElementBase CellElementCategory">316491</td>
+					<td class="Cell CellTop CellItemCount CellElementCategory">155064</td>
+					<td class="Cell CellTop CellItemCount CellElementCategory">161427</td>
+					<td class="Cell CellTop CellItemCount CellElementMean CellElementCategory">35.1</td>
+					<td class="Cell CellTop CellItemCount CellElementMean CellElementCategory">25.3</td>
+					<td class="Cell CellTop CellItemCount CellElementMean CellElementCategory">38.0</td>
+					<td class="Cell CellTop CellItemCount CellElementCategory">56522</td>
+					<td class="Cell CellTop CellItemCount CellElementCategory">33707</td>
+					<td class="Cell CellTop CellItemCount CellElementCategory">78984</td>
+					<td class="Cell CellTop CellItemCount CellElementCategory">46954</td>
+					<td class="Cell CellTop CellItemCount CellElementCategory">5521</td>
+					<td class="Cell CellTop CellItemCount CellElementCategory">94803</td>
+					<td class="Cell CellTop CellItemCount CellElementCategory">-</td>
+					<td class="Cell CellTop CellItemCount CellElementCategory">-</td>
+					<td class="Cell CellTop CellItemCount CellElementCategory">-</td>
+					<td class="Cell CellTop CellItemCount CellElementCategory">-</td>
+					<td class="Cell CellTop CellItemCount CellElementCategory">316491</td>
+					<td class="Cell CellTop CellItemCount CellElementCategory">-</td>
+					<td class="Cell CellTop CellItemCount CellElementCategory">-</td>
+					<td class="Cell CellTop CellItemCount CellElementCategory">-</td>
+					<td class="Cell CellTop CellItemCount CellElementCategory">-</td>
+				</tr>
+				<tr>
+					<td class="Cell CellMiddle CellItemColPercent CellElementBase CellElementCategory">18.7%</td>
+					<td class="Cell CellMiddle CellItemColPercent CellElementCategory">25.2%</td>
+					<td class="Cell CellMiddle CellItemColPercent CellElementCategory">15.0%</td>
+					<td class="Cell CellMiddle CellItemColPercent CellElementMean CellElementCategory"> </td>
+					<td class="Cell CellMiddle CellItemColPercent CellElementMean CellElementCategory"> </td>
+					<td class="Cell CellMiddle CellItemColPercent CellElementMean CellElementCategory"> </td>
+					<td class="Cell CellMiddle CellItemColPercent CellElementCategory">19.2%</td>
+					<td class="Cell CellMiddle CellItemColPercent CellElementCategory">19.3%</td>
+					<td class="Cell CellMiddle CellItemColPercent CellElementCategory">19.3%</td>
+					<td class="Cell CellMiddle CellItemColPercent CellElementCategory">18.9%</td>
+					<td class="Cell CellMiddle CellItemColPercent CellElementCategory">19.3%</td>
+					<td class="Cell CellMiddle CellItemColPercent CellElementCategory">17.7%</td>
+					<td class="Cell CellMiddle CellItemColPercent CellElementCategory">-</td>
+					<td class="Cell CellMiddle CellItemColPercent CellElementCategory">-</td>
+					<td class="Cell CellMiddle CellItemColPercent CellElementCategory">-</td>
+					<td class="Cell CellMiddle CellItemColPercent CellElementCategory">-</td>
+					<td class="Cell CellMiddle CellItemColPercent CellElementCategory">100.0%</td>
+					<td class="Cell CellMiddle CellItemColPercent CellElementCategory">-</td>
+					<td class="Cell CellMiddle CellItemColPercent CellElementCategory">-</td>
+					<td class="Cell CellMiddle CellItemColPercent CellElementCategory">-</td>
+					<td class="Cell CellMiddle CellItemColPercent CellElementCategory">-</td>
+				</tr>
+				<tr>
+					<td class="Cell CellBottom CellItemColPropResults CellElementBase CellElementCategory"> </td>
+					<td class="Cell CellBottom CellItemColPropResults CellElementCategory">C</td>
+					<td class="Cell CellBottom CellItemColPropResults CellElementCategory"> </td>
+					<td class="Cell CellBottom CellItemColPropResults CellElementMean CellElementCategory"> </td>
+					<td class="Cell CellBottom CellItemColPropResults CellElementMean CellElementCategory"> </td>
+					<td class="Cell CellBottom CellItemColPropResults CellElementMean CellElementCategory"> </td>
+					<td class="Cell CellBottom CellItemColPropResults CellElementCategory">JL</td>
+					<td class="Cell CellBottom CellItemColPropResults CellElementCategory">JL</td>
+					<td class="Cell CellBottom CellItemColPropResults CellElementCategory">JL</td>
+					<td class="Cell CellBottom CellItemColPropResults CellElementCategory">L</td>
+					<td class="Cell CellBottom CellItemColPropResults CellElementCategory">L</td>
+					<td class="Cell CellBottom CellItemColPropResults CellElementCategory"> </td>
+					<td class="Cell CellBottom CellItemColPropResults CellElementCategory"> </td>
+					<td class="Cell CellBottom CellItemColPropResults CellElementCategory"> </td>
+					<td class="Cell CellBottom CellItemColPropResults CellElementCategory"> </td>
+					<td class="Cell CellBottom CellItemColPropResults CellElementCategory"> </td>
+					<td class="Cell CellBottom CellItemColPropResults CellElementCategory">MNOPRSTU</td>
+					<td class="Cell CellBottom CellItemColPropResults CellElementCategory"> </td>
+					<td class="Cell CellBottom CellItemColPropResults CellElementCategory"> </td>
+					<td class="Cell CellBottom CellItemColPropResults CellElementCategory"> </td>
+					<td class="Cell CellBottom CellItemColPropResults CellElementCategory"> </td>
+				</tr>
+				<tr>
+					<td rowspan="3" class="Axis AxisElementSide AxisElementCategory">2020</td>
+					<td class="Cell CellTop CellItemCount CellElementBase CellElementCategory">262882</td>
+					<td class="Cell CellTop CellItemCount CellElementCategory">125635</td>
+					<td class="Cell CellTop CellItemCount CellElementCategory">137247</td>
+					<td class="Cell CellTop CellItemCount CellElementMean CellElementCategory">38.1</td>
+					<td class="Cell CellTop CellItemCount CellElementMean CellElementCategory">41.5</td>
+					<td class="Cell CellTop CellItemCount CellElementMean CellElementCategory">37.1</td>
+					<td class="Cell CellTop CellItemCount CellElementCategory">46465</td>
+					<td class="Cell CellTop CellItemCount CellElementCategory">26214</td>
+					<td class="Cell CellTop CellItemCount CellElementCategory">66301</td>
+					<td class="Cell CellTop CellItemCount CellElementCategory">37036</td>
+					<td class="Cell CellTop CellItemCount CellElementCategory">4111</td>
+					<td class="Cell CellTop CellItemCount CellElementCategory">82755</td>
+					<td class="Cell CellTop CellItemCount CellElementCategory">-</td>
+					<td class="Cell CellTop CellItemCount CellElementCategory">-</td>
+					<td class="Cell CellTop CellItemCount CellElementCategory">-</td>
+					<td class="Cell CellTop CellItemCount CellElementCategory">-</td>
+					<td class="Cell CellTop CellItemCount CellElementCategory">-</td>
+					<td class="Cell CellTop CellItemCount CellElementCategory">262882</td>
+					<td class="Cell CellTop CellItemCount CellElementCategory">-</td>
+					<td class="Cell CellTop CellItemCount CellElementCategory">-</td>
+					<td class="Cell CellTop CellItemCount CellElementCategory">-</td>
+				</tr>
+				<tr>
+					<td class="Cell CellMiddle CellItemColPercent CellElementBase CellElementCategory">15.5%</td>
+					<td class="Cell CellMiddle CellItemColPercent CellElementCategory">20.4%</td>
+					<td class="Cell CellMiddle CellItemColPercent CellElementCategory">12.7%</td>
+					<td class="Cell CellMiddle CellItemColPercent CellElementMean CellElementCategory"> </td>
+					<td class="Cell CellMiddle CellItemColPercent CellElementMean CellElementCategory"> </td>
+					<td class="Cell CellMiddle CellItemColPercent CellElementMean CellElementCategory"> </td>
+					<td class="Cell CellMiddle CellItemColPercent CellElementCategory">15.8%</td>
+					<td class="Cell CellMiddle CellItemColPercent CellElementCategory">15.0%</td>
+					<td class="Cell CellMiddle CellItemColPercent CellElementCategory">16.2%</td>
+					<td class="Cell CellMiddle CellItemColPercent CellElementCategory">14.9%</td>
+					<td class="Cell CellMiddle CellItemColPercent CellElementCategory">14.4%</td>
+					<td class="Cell CellMiddle CellItemColPercent CellElementCategory">15.4%</td>
+					<td class="Cell CellMiddle CellItemColPercent CellElementCategory">-</td>
+					<td class="Cell CellMiddle CellItemColPercent CellElementCategory">-</td>
+					<td class="Cell CellMiddle CellItemColPercent CellElementCategory">-</td>
+					<td class="Cell CellMiddle CellItemColPercent CellElementCategory">-</td>
+					<td class="Cell CellMiddle CellItemColPercent CellElementCategory">-</td>
+					<td class="Cell CellMiddle CellItemColPercent CellElementCategory">100.0%</td>
+					<td class="Cell CellMiddle CellItemColPercent CellElementCategory">-</td>
+					<td class="Cell CellMiddle CellItemColPercent CellElementCategory">-</td>
+					<td class="Cell CellMiddle CellItemColPercent CellElementCategory">-</td>
+				</tr>
+				<tr>
+					<td class="Cell CellBottom CellItemColPropResults CellElementBase CellElementCategory"> </td>
+					<td class="Cell CellBottom CellItemColPropResults CellElementCategory">C</td>
+					<td class="Cell CellBottom CellItemColPropResults CellElementCategory"> </td>
+					<td class="Cell CellBottom CellItemColPropResults CellElementMean CellElementCategory"> </td>
+					<td class="Cell CellBottom CellItemColPropResults CellElementMean CellElementCategory"> </td>
+					<td class="Cell CellBottom CellItemColPropResults CellElementMean CellElementCategory"> </td>
+					<td class="Cell CellBottom CellItemColPropResults CellElementCategory">HJKL</td>
+					<td class="Cell CellBottom CellItemColPropResults CellElementCategory">K</td>
+					<td class="Cell CellBottom CellItemColPropResults CellElementCategory">GHJKL</td>
+					<td class="Cell CellBottom CellItemColPropResults CellElementCategory">K</td>
+					<td class="Cell CellBottom CellItemColPropResults CellElementCategory"> </td>
+					<td class="Cell CellBottom CellItemColPropResults CellElementCategory">HJK</td>
+					<td class="Cell CellBottom CellItemColPropResults CellElementCategory"> </td>
+					<td class="Cell CellBottom CellItemColPropResults CellElementCategory"> </td>
+					<td class="Cell CellBottom CellItemColPropResults CellElementCategory"> </td>
+					<td class="Cell CellBottom CellItemColPropResults CellElementCategory"> </td>
+					<td class="Cell CellBottom CellItemColPropResults CellElementCategory"> </td>
+					<td class="Cell CellBottom CellItemColPropResults CellElementCategory">MNOPQSTU</td>
+					<td class="Cell CellBottom CellItemColPropResults CellElementCategory"> </td>
+					<td class="Cell CellBottom CellItemColPropResults CellElementCategory"> </td>
+					<td class="Cell CellBottom CellItemColPropResults CellElementCategory"> </td>
+				</tr>
+				<tr>
+					<td rowspan="3" class="Axis AxisElementSide AxisElementCategory">2021</td>
+					<td class="Cell CellTop CellItemCount CellElementBase CellElementCategory">261450</td>
+					<td class="Cell CellTop CellItemCount CellElementCategory">129335</td>
+					<td class="Cell CellTop CellItemCount CellElementCategory">132115</td>
+					<td class="Cell CellTop CellItemCount CellElementMean CellElementCategory">47.1</td>
+					<td class="Cell CellTop CellItemCount CellElementMean CellElementCategory">49.6</td>
+					<td class="Cell CellTop CellItemCount CellElementMean CellElementCategory">46.2</td>
+					<td class="Cell CellTop CellItemCount CellElementCategory">43416</td>
+					<td class="Cell CellTop CellItemCount CellElementCategory">26994</td>
+					<td class="Cell CellTop CellItemCount CellElementCategory">58708</td>
+					<td class="Cell CellTop CellItemCount CellElementCategory">38471</td>
+					<td class="Cell CellTop CellItemCount CellElementCategory">5064</td>
+					<td class="Cell CellTop CellItemCount CellElementCategory">88797</td>
+					<td class="Cell CellTop CellItemCount CellElementCategory">-</td>
+					<td class="Cell CellTop CellItemCount CellElementCategory">-</td>
+					<td class="Cell CellTop CellItemCount CellElementCategory">-</td>
+					<td class="Cell CellTop CellItemCount CellElementCategory">-</td>
+					<td class="Cell CellTop CellItemCount CellElementCategory">-</td>
+					<td class="Cell CellTop CellItemCount CellElementCategory">-</td>
+					<td class="Cell CellTop CellItemCount CellElementCategory">261450</td>
+					<td class="Cell CellTop CellItemCount CellElementCategory">-</td>
+					<td class="Cell CellTop CellItemCount CellElementCategory">-</td>
+				</tr>
+				<tr>
+					<td class="Cell CellMiddle CellItemColPercent CellElementBase CellElementCategory">15.4%</td>
+					<td class="Cell CellMiddle CellItemColPercent CellElementCategory">21.0%</td>
+					<td class="Cell CellMiddle CellItemColPercent CellElementCategory">12.3%</td>
+					<td class="Cell CellMiddle CellItemColPercent CellElementMean CellElementCategory"> </td>
+					<td class="Cell CellMiddle CellItemColPercent CellElementMean CellElementCategory"> </td>
+					<td class="Cell CellMiddle CellItemColPercent CellElementMean CellElementCategory"> </td>
+					<td class="Cell CellMiddle CellItemColPercent CellElementCategory">14.8%</td>
+					<td class="Cell CellMiddle CellItemColPercent CellElementCategory">15.4%</td>
+					<td class="Cell CellMiddle CellItemColPercent CellElementCategory">14.4%</td>
+					<td class="Cell CellMiddle CellItemColPercent CellElementCategory">15.5%</td>
+					<td class="Cell CellMiddle CellItemColPercent CellElementCategory">17.7%</td>
+					<td class="Cell CellMiddle CellItemColPercent CellElementCategory">16.5%</td>
+					<td class="Cell CellMiddle CellItemColPercent CellElementCategory">-</td>
+					<td class="Cell CellMiddle CellItemColPercent CellElementCategory">-</td>
+					<td class="Cell CellMiddle CellItemColPercent CellElementCategory">-</td>
+					<td class="Cell CellMiddle CellItemColPercent CellElementCategory">-</td>
+					<td class="Cell CellMiddle CellItemColPercent CellElementCategory">-</td>
+					<td class="Cell CellMiddle CellItemColPercent CellElementCategory">-</td>
+					<td class="Cell CellMiddle CellItemColPercent CellElementCategory">100.0%</td>
+					<td class="Cell CellMiddle CellItemColPercent CellElementCategory">-</td>
+					<td class="Cell CellMiddle CellItemColPercent CellElementCategory">-</td>
+				</tr>
+				<tr>
+					<td class="Cell CellBottom CellItemColPropResults CellElementBase CellElementCategory"> </td>
+					<td class="Cell CellBottom CellItemColPropResults CellElementCategory">C</td>
+					<td class="Cell CellBottom CellItemColPropResults CellElementCategory"> </td>
+					<td class="Cell CellBottom CellItemColPropResults CellElementMean CellElementCategory"> </td>
+					<td class="Cell CellBottom CellItemColPropResults CellElementMean CellElementCategory"> </td>
+					<td class="Cell CellBottom CellItemColPropResults CellElementMean CellElementCategory"> </td>
+					<td class="Cell CellBottom CellItemColPropResults CellElementCategory">I</td>
+					<td class="Cell CellBottom CellItemColPropResults CellElementCategory">GI</td>
+					<td class="Cell CellBottom CellItemColPropResults CellElementCategory"> </td>
+					<td class="Cell CellBottom CellItemColPropResults CellElementCategory">GI</td>
+					<td class="Cell CellBottom CellItemColPropResults CellElementCategory">GHIJL</td>
+					<td class="Cell CellBottom CellItemColPropResults CellElementCategory">GHIJ</td>
+					<td class="Cell CellBottom CellItemColPropResults CellElementCategory"> </td>
+					<td class="Cell CellBottom CellItemColPropResults CellElementCategory"> </td>
+					<td class="Cell CellBottom CellItemColPropResults CellElementCategory"> </td>
+					<td class="Cell CellBottom CellItemColPropResults CellElementCategory"> </td>
+					<td class="Cell CellBottom CellItemColPropResults CellElementCategory"> </td>
+					<td class="Cell CellBottom CellItemColPropResults CellElementCategory"> </td>
+					<td class="Cell CellBottom CellItemColPropResults CellElementCategory">MNOPQRTU</td>
+					<td class="Cell CellBottom CellItemColPropResults CellElementCategory"> </td>
+					<td class="Cell CellBottom CellItemColPropResults CellElementCategory"> </td>
+				</tr>
+				<tr>
+					<td rowspan="3" class="Axis AxisElementSide AxisElementCategory">2022</td>
+					<td class="Cell CellTop CellItemCount CellElementBase CellElementCategory">271562</td>
+					<td class="Cell CellTop CellItemCount CellElementCategory">135483</td>
+					<td class="Cell CellTop CellItemCount CellElementCategory">136079</td>
+					<td class="Cell CellTop CellItemCount CellElementMean CellElementCategory">28.0</td>
+					<td class="Cell CellTop CellItemCount CellElementMean CellElementCategory">20.8</td>
+					<td class="Cell CellTop CellItemCount CellElementMean CellElementCategory">30.6</td>
+					<td class="Cell CellTop CellItemCount CellElementCategory">41647</td>
+					<td class="Cell CellTop CellItemCount CellElementCategory">27483</td>
+					<td class="Cell CellTop CellItemCount CellElementCategory">63455</td>
+					<td class="Cell CellTop CellItemCount CellElementCategory">35842</td>
+					<td class="Cell CellTop CellItemCount CellElementCategory">4146</td>
+					<td class="Cell CellTop CellItemCount CellElementCategory">98989</td>
+					<td class="Cell CellTop CellItemCount CellElementCategory">-</td>
+					<td class="Cell CellTop CellItemCount CellElementCategory">-</td>
+					<td class="Cell CellTop CellItemCount CellElementCategory">-</td>
+					<td class="Cell CellTop CellItemCount CellElementCategory">-</td>
+					<td class="Cell CellTop CellItemCount CellElementCategory">-</td>
+					<td class="Cell CellTop CellItemCount CellElementCategory">-</td>
+					<td class="Cell CellTop CellItemCount CellElementCategory">-</td>
+					<td class="Cell CellTop CellItemCount CellElementCategory">271562</td>
+					<td class="Cell CellTop CellItemCount CellElementCategory">-</td>
+				</tr>
+				<tr>
+					<td class="Cell CellMiddle CellItemColPercent CellElementBase CellElementCategory">16.0%</td>
+					<td class="Cell CellMiddle CellItemColPercent CellElementCategory">22.0%</td>
+					<td class="Cell CellMiddle CellItemColPercent CellElementCategory">12.6%</td>
+					<td class="Cell CellMiddle CellItemColPercent CellElementMean CellElementCategory"> </td>
+					<td class="Cell CellMiddle CellItemColPercent CellElementMean CellElementCategory"> </td>
+					<td class="Cell CellMiddle CellItemColPercent CellElementMean CellElementCategory"> </td>
+					<td class="Cell CellMiddle CellItemColPercent CellElementCategory">14.1%</td>
+					<td class="Cell CellMiddle CellItemColPercent CellElementCategory">15.7%</td>
+					<td class="Cell CellMiddle CellItemColPercent CellElementCategory">15.5%</td>
+					<td class="Cell CellMiddle CellItemColPercent CellElementCategory">14.4%</td>
+					<td class="Cell CellMiddle CellItemColPercent CellElementCategory">14.5%</td>
+					<td class="Cell CellMiddle CellItemColPercent CellElementCategory">18.4%</td>
+					<td class="Cell CellMiddle CellItemColPercent CellElementCategory">-</td>
+					<td class="Cell CellMiddle CellItemColPercent CellElementCategory">-</td>
+					<td class="Cell CellMiddle CellItemColPercent CellElementCategory">-</td>
+					<td class="Cell CellMiddle CellItemColPercent CellElementCategory">-</td>
+					<td class="Cell CellMiddle CellItemColPercent CellElementCategory">-</td>
+					<td class="Cell CellMiddle CellItemColPercent CellElementCategory">-</td>
+					<td class="Cell CellMiddle CellItemColPercent CellElementCategory">-</td>
+					<td class="Cell CellMiddle CellItemColPercent CellElementCategory">100.0%</td>
+					<td class="Cell CellMiddle CellItemColPercent CellElementCategory">-</td>
+				</tr>
+				<tr>
+					<td class="Cell CellBottom CellItemColPropResults CellElementBase CellElementCategory"> </td>
+					<td class="Cell CellBottom CellItemColPropResults CellElementCategory">C</td>
+					<td class="Cell CellBottom CellItemColPropResults CellElementCategory"> </td>
+					<td class="Cell CellBottom CellItemColPropResults CellElementMean CellElementCategory"> </td>
+					<td class="Cell CellBottom CellItemColPropResults CellElementMean CellElementCategory"> </td>
+					<td class="Cell CellBottom CellItemColPropResults CellElementMean CellElementCategory"> </td>
+					<td class="Cell CellBottom CellItemColPropResults CellElementCategory"> </td>
+					<td class="Cell CellBottom CellItemColPropResults CellElementCategory">GIJK</td>
+					<td class="Cell CellBottom CellItemColPropResults CellElementCategory">GJK</td>
+					<td class="Cell CellBottom CellItemColPropResults CellElementCategory">G</td>
+					<td class="Cell CellBottom CellItemColPropResults CellElementCategory"> </td>
+					<td class="Cell CellBottom CellItemColPropResults CellElementCategory">GHIJK</td>
+					<td class="Cell CellBottom CellItemColPropResults CellElementCategory"> </td>
+					<td class="Cell CellBottom CellItemColPropResults CellElementCategory"> </td>
+					<td class="Cell CellBottom CellItemColPropResults CellElementCategory"> </td>
+					<td class="Cell CellBottom CellItemColPropResults CellElementCategory"> </td>
+					<td class="Cell CellBottom CellItemColPropResults CellElementCategory"> </td>
+					<td class="Cell CellBottom CellItemColPropResults CellElementCategory"> </td>
+					<td class="Cell CellBottom CellItemColPropResults CellElementCategory"> </td>
+					<td class="Cell CellBottom CellItemColPropResults CellElementCategory">MNOPQRSU</td>
+					<td class="Cell CellBottom CellItemColPropResults CellElementCategory"> </td>
+				</tr>
+				<tr>
+					<td rowspan="3" class="Axis AxisElementSide AxisElementCategory">2023</td>
+					<td class="Cell CellTop CellItemCount CellElementBase CellElementCategory">48934</td>
+					<td class="Cell CellTop CellItemCount CellElementCategory">27461</td>
+					<td class="Cell CellTop CellItemCount CellElementCategory">21473</td>
+					<td class="Cell CellTop CellItemCount CellElementMean CellElementCategory">7.3</td>
+					<td class="Cell CellTop CellItemCount CellElementMean CellElementCategory">8.2</td>
+					<td class="Cell CellTop CellItemCount CellElementMean CellElementCategory">7.1</td>
+					<td class="Cell CellTop CellItemCount CellElementCategory">9524</td>
+					<td class="Cell CellTop CellItemCount CellElementCategory">5189</td>
+					<td class="Cell CellTop CellItemCount CellElementCategory">11648</td>
+					<td class="Cell CellTop CellItemCount CellElementCategory">6239</td>
+					<td class="Cell CellTop CellItemCount CellElementCategory">904</td>
+					<td class="Cell CellTop CellItemCount CellElementCategory">15430</td>
+					<td class="Cell CellTop CellItemCount CellElementCategory">-</td>
+					<td class="Cell CellTop CellItemCount CellElementCategory">-</td>
+					<td class="Cell CellTop CellItemCount CellElementCategory">-</td>
+					<td class="Cell CellTop CellItemCount CellElementCategory">-</td>
+					<td class="Cell CellTop CellItemCount CellElementCategory">-</td>
+					<td class="Cell CellTop CellItemCount CellElementCategory">-</td>
+					<td class="Cell CellTop CellItemCount CellElementCategory">-</td>
+					<td class="Cell CellTop CellItemCount CellElementCategory">-</td>
+					<td class="Cell CellTop CellItemCount CellElementCategory">48934</td>
+				</tr>
+				<tr>
+					<td class="Cell CellMiddle CellItemColPercent CellElementBase CellElementCategory">2.9%</td>
+					<td class="Cell CellMiddle CellItemColPercent CellElementCategory">4.5%</td>
+					<td class="Cell CellMiddle CellItemColPercent CellElementCategory">2.0%</td>
+					<td class="Cell CellMiddle CellItemColPercent CellElementMean CellElementCategory"> </td>
+					<td class="Cell CellMiddle CellItemColPercent CellElementMean CellElementCategory"> </td>
+					<td class="Cell CellMiddle CellItemColPercent CellElementMean CellElementCategory"> </td>
+					<td class="Cell CellMiddle CellItemColPercent CellElementCategory">3.2%</td>
+					<td class="Cell CellMiddle CellItemColPercent CellElementCategory">3.0%</td>
+					<td class="Cell CellMiddle CellItemColPercent CellElementCategory">2.8%</td>
+					<td class="Cell CellMiddle CellItemColPercent CellElementCategory">2.5%</td>
+					<td class="Cell CellMiddle CellItemColPercent CellElementCategory">3.2%</td>
+					<td class="Cell CellMiddle CellItemColPercent CellElementCategory">2.9%</td>
+					<td class="Cell CellMiddle CellItemColPercent CellElementCategory">-</td>
+					<td class="Cell CellMiddle CellItemColPercent CellElementCategory">-</td>
+					<td class="Cell CellMiddle CellItemColPercent CellElementCategory">-</td>
+					<td class="Cell CellMiddle CellItemColPercent CellElementCategory">-</td>
+					<td class="Cell CellMiddle CellItemColPercent CellElementCategory">-</td>
+					<td class="Cell CellMiddle CellItemColPercent CellElementCategory">-</td>
+					<td class="Cell CellMiddle CellItemColPercent CellElementCategory">-</td>
+					<td class="Cell CellMiddle CellItemColPercent CellElementCategory">-</td>
+					<td class="Cell CellMiddle CellItemColPercent CellElementCategory">100.0%</td>
+				</tr>
+				<tr>
+					<td class="Cell CellBottom CellItemColPropResults CellElementBase CellElementCategory"> </td>
+					<td class="Cell CellBottom CellItemColPropResults CellElementCategory">C</td>
+					<td class="Cell CellBottom CellItemColPropResults CellElementCategory"> </td>
+					<td class="Cell CellBottom CellItemColPropResults CellElementMean CellElementCategory"> </td>
+					<td class="Cell CellBottom CellItemColPropResults CellElementMean CellElementCategory"> </td>
+					<td class="Cell CellBottom CellItemColPropResults CellElementMean CellElementCategory"> </td>
+					<td class="Cell CellBottom CellItemColPropResults CellElementCategory">HIJL</td>
+					<td class="Cell CellBottom CellItemColPropResults CellElementCategory">IJL</td>
+					<td class="Cell CellBottom CellItemColPropResults CellElementCategory">J</td>
+					<td class="Cell CellBottom CellItemColPropResults CellElementCategory"> </td>
+					<td class="Cell CellBottom CellItemColPropResults CellElementCategory">IJL</td>
+					<td class="Cell CellBottom CellItemColPropResults CellElementCategory">J</td>
+					<td class="Cell CellBottom CellItemColPropResults CellElementCategory"> </td>
+					<td class="Cell CellBottom CellItemColPropResults CellElementCategory"> </td>
+					<td class="Cell CellBottom CellItemColPropResults CellElementCategory"> </td>
+					<td class="Cell CellBottom CellItemColPropResults CellElementCategory"> </td>
+					<td class="Cell CellBottom CellItemColPropResults CellElementCategory"> </td>
+					<td class="Cell CellBottom CellItemColPropResults CellElementCategory"> </td>
+					<td class="Cell CellBottom CellItemColPropResults CellElementCategory"> </td>
+					<td class="Cell CellBottom CellItemColPropResults CellElementCategory"> </td>
+					<td class="Cell CellBottom CellItemColPropResults CellElementCategory">MNOPQRST</td>
+				</tr>
+				<tr>
+					<td rowspan="3" class="Axis AxisElementSide AxisElementSubTotal">Sigma</td>
+					<td class="Cell CellTop CellItemCount CellElementBase CellElementSubTotal">1692389</td>
+					<td class="Cell CellTop CellItemCount CellElementCategory CellElementSubTotal">615302</td>
+					<td class="Cell CellTop CellItemCount CellElementCategory CellElementSubTotal">1077087</td>
+					<td class="Cell CellTop CellItemCount CellElementMean CellElementSubTotal">-</td>
+					<td class="Cell CellTop CellItemCount CellElementMean CellElementSubTotal">-</td>
+					<td class="Cell CellTop CellItemCount CellElementMean CellElementSubTotal">-</td>
+					<td class="Cell CellTop CellItemCount CellElementCategory CellElementSubTotal">294342</td>
+					<td class="Cell CellTop CellItemCount CellElementCategory CellElementSubTotal">174766</td>
+					<td class="Cell CellTop CellItemCount CellElementCategory CellElementSubTotal">409034</td>
+					<td class="Cell CellTop CellItemCount CellElementCategory CellElementSubTotal">248702</td>
+					<td class="Cell CellTop CellItemCount CellElementCategory CellElementSubTotal">28605</td>
+					<td class="Cell CellTop CellItemCount CellElementCategory CellElementSubTotal">536940</td>
+					<td class="Cell CellTop CellItemCount CellElementCategory CellElementSubTotal">105761</td>
+					<td class="Cell CellTop CellItemCount CellElementCategory CellElementSubTotal">119159</td>
+					<td class="Cell CellTop CellItemCount CellElementCategory CellElementSubTotal">134067</td>
+					<td class="Cell CellTop CellItemCount CellElementCategory CellElementSubTotal">172083</td>
+					<td class="Cell CellTop CellItemCount CellElementCategory CellElementSubTotal">316491</td>
+					<td class="Cell CellTop CellItemCount CellElementCategory CellElementSubTotal">262882</td>
+					<td class="Cell CellTop CellItemCount CellElementCategory CellElementSubTotal">261450</td>
+					<td class="Cell CellTop CellItemCount CellElementCategory CellElementSubTotal">271562</td>
+					<td class="Cell CellTop CellItemCount CellElementCategory CellElementSubTotal">48934</td>
+				</tr>
+				<tr>
+					<td class="Cell CellMiddle CellItemColPercent CellElementBase CellElementSubTotal">100.0%</td>
+					<td class="Cell CellMiddle CellItemColPercent CellElementCategory CellElementSubTotal">100.0%</td>
+					<td class="Cell CellMiddle CellItemColPercent CellElementCategory CellElementSubTotal">100.0%</td>
+					<td class="Cell CellMiddle CellItemColPercent CellElementMean CellElementSubTotal"> </td>
+					<td class="Cell CellMiddle CellItemColPercent CellElementMean CellElementSubTotal"> </td>
+					<td class="Cell CellMiddle CellItemColPercent CellElementMean CellElementSubTotal"> </td>
+					<td class="Cell CellMiddle CellItemColPercent CellElementCategory CellElementSubTotal">100.0%</td>
+					<td class="Cell CellMiddle CellItemColPercent CellElementCategory CellElementSubTotal">100.0%</td>
+					<td class="Cell CellMiddle CellItemColPercent CellElementCategory CellElementSubTotal">100.0%</td>
+					<td class="Cell CellMiddle CellItemColPercent CellElementCategory CellElementSubTotal">100.0%</td>
+					<td class="Cell CellMiddle CellItemColPercent CellElementCategory CellElementSubTotal">100.0%</td>
+					<td class="Cell CellMiddle CellItemColPercent CellElementCategory CellElementSubTotal">100.0%</td>
+					<td class="Cell CellMiddle CellItemColPercent CellElementCategory CellElementSubTotal">100.0%</td>
+					<td class="Cell CellMiddle CellItemColPercent CellElementCategory CellElementSubTotal">100.0%</td>
+					<td class="Cell CellMiddle CellItemColPercent CellElementCategory CellElementSubTotal">100.0%</td>
+					<td class="Cell CellMiddle CellItemColPercent CellElementCategory CellElementSubTotal">100.0%</td>
+					<td class="Cell CellMiddle CellItemColPercent CellElementCategory CellElementSubTotal">100.0%</td>
+					<td class="Cell CellMiddle CellItemColPercent CellElementCategory CellElementSubTotal">100.0%</td>
+					<td class="Cell CellMiddle CellItemColPercent CellElementCategory CellElementSubTotal">100.0%</td>
+					<td class="Cell CellMiddle CellItemColPercent CellElementCategory CellElementSubTotal">100.0%</td>
+					<td class="Cell CellMiddle CellItemColPercent CellElementCategory CellElementSubTotal">100.0%</td>
+				</tr>
+				<tr>
+					<td class="Cell CellBottom CellItemColPropResults CellElementBase CellElementSubTotal"> </td>
+					<td class="Cell CellBottom CellItemColPropResults CellElementCategory CellElementSubTotal"> </td>
+					<td class="Cell CellBottom CellItemColPropResults CellElementCategory CellElementSubTotal"> </td>
+					<td class="Cell CellBottom CellItemColPropResults CellElementMean CellElementSubTotal"> </td>
+					<td class="Cell CellBottom CellItemColPropResults CellElementMean CellElementSubTotal"> </td>
+					<td class="Cell CellBottom CellItemColPropResults CellElementMean CellElementSubTotal"> </td>
+					<td class="Cell CellBottom CellItemColPropResults CellElementCategory CellElementSubTotal"> </td>
+					<td class="Cell CellBottom CellItemColPropResults CellElementCategory CellElementSubTotal"> </td>
+					<td class="Cell CellBottom CellItemColPropResults CellElementCategory CellElementSubTotal"> </td>
+					<td class="Cell CellBottom CellItemColPropResults CellElementCategory CellElementSubTotal"> </td>
+					<td class="Cell CellBottom CellItemColPropResults CellElementCategory CellElementSubTotal"> </td>
+					<td class="Cell CellBottom CellItemColPropResults CellElementCategory CellElementSubTotal"> </td>
+					<td class="Cell CellBottom CellItemColPropResults CellElementCategory CellElementSubTotal"> </td>
+					<td class="Cell CellBottom CellItemColPropResults CellElementCategory CellElementSubTotal"> </td>
+					<td class="Cell CellBottom CellItemColPropResults CellElementCategory CellElementSubTotal"> </td>
+					<td class="Cell CellBottom CellItemColPropResults CellElementCategory CellElementSubTotal"> </td>
+					<td class="Cell CellBottom CellItemColPropResults CellElementCategory CellElementSubTotal"> </td>
+					<td class="Cell CellBottom CellItemColPropResults CellElementCategory CellElementSubTotal"> </td>
+					<td class="Cell CellBottom CellItemColPropResults CellElementCategory CellElementSubTotal"> </td>
+					<td class="Cell CellBottom CellItemColPropResults CellElementCategory CellElementSubTotal"> </td>
+					<td class="Cell CellBottom CellItemColPropResults CellElementCategory CellElementSubTotal"> </td>
+				</tr>
+			</table>
+			<br/>
+			<table width="100%" cellpadding="0" cellspacing="0">
+				<tr>
+					<td colspan="3" class="Annotation TitleFooter">Level: Top<BR/></td>
+				</tr>
+				<tr>
+					<td class="Annotation LeftFooter">Cell Contents: <BR/>- Count<BR/>- Column Percentage<BR/>- Statistical Test Results<BR/>Statistics: <BR/>- Column Proportions: <BR/>   Columns Tested (5%): B/C,D/E/F,G/H/I/J/K/L,M/N/O/P/Q/R/S/T/U<BR/>   Minimum Base: 30 (**), Small Base: 100 (*)<BR/>- Column Means: <BR/>   Columns Tested (5%): B/C,D/E/F,G/H/I/J/K/L,M/N/O/P/Q/R/S/T/U<BR/>   Minimum Base: 30 (**), Small Base: 100 (*)<BR/>Populate warnings: <BR/>- The column means test was not run. No suitable mean elements are available.<BR/>- Columns DEF are not valid to carry out statistical tests.<BR/></td>
+				</tr>
+			</table>
+		</body>
+	</html>

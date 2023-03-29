@@ -1,0 +1,663 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+	<html>
+		<head>
+			<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+			<style type="text/css">
+				<!--/*
+Licensed Materials - Property of IBM
+
+
+
+IBM SPSS Products: Data Collection
+
+(C) Copyright IBM Corp. 2001, 2013
+
+US Government Users Restricted Rights - Use, duplication or disclosure restricted by GSA ADP 
+Schedule Contract with IBM Corp.
+*/
+BODY
+{
+    BACKGROUND-IMAGE: none;
+    BACKGROUND-REPEAT: repeat;
+    BACKGROUND-COLOR: #94BEE7;
+}
+
+TABLE
+{
+    BORDER-COLLAPSE: collapse;
+}
+
+TD.Cell
+{
+    PADDING-TOP: 1px;
+    PADDING-RIGHT: 1px;
+    PADDING-LEFT:1px;
+    BORDER-RIGHT: black 0.5pt solid;
+    BORDER-TOP: black 0.5pt solid;
+    BORDER-LEFT: black 0.5pt solid;
+    BORDER-BOTTOM: black 0.5pt solid;
+    FONT-WEIGHT: normal;
+    FONT-SIZE: 8pt;
+    FONT-STYLE: normal;
+    FONT-FAMILY: Arial, sans-serif;
+    COLOR: windowtext;
+    VERTICAL-ALIGN: middle;
+    TEXT-ALIGN: center;
+    TEXT-DECORATION: none;
+    BACKGROUND: #ffffcc;
+    WIDTH: 70px;
+}
+TD.CellTop
+{
+    BORDER-BOTTOM: none;
+}
+TD.CellBottom
+{
+    BORDER-TOP: none;
+}
+TD.CellMiddle
+{
+    BORDER-TOP: none;
+    BORDER-BOTTOM: none;
+}
+TD.CellTopBottom
+{
+}
+TD.CellElementCategory,
+TD.CellElementTableStatistic,
+TD.CellElementMean,
+TD.CellElementStdDev,
+TD.CellElementStdErr,
+TD.CellElementSampleVar,
+TD.CellElementTotal,
+TD.CellElementSubTotal,
+TD.CellElementText,
+TD.CellElementNetDiffs,
+TD.CellElementPairedPrefs,
+TD.CellElementMinimum,
+TD.CellElementMaximum,
+TD.CellElementOtherDerived,
+TD.CellElementNet,
+TD.CellElementCombine,
+TD.CellElementExpression,
+TD.CellElementNumeric,
+TD.CellElementDerived,
+TD.CellElementSum,
+TD.CellElementMedian,
+TD.CellElementPercentile,
+TD.CellElementMode,
+TD.CellElementProfile,
+TD.CellElementProfileResult,
+TD.CellElementTValue,
+TD.CellElementTProb
+{
+}
+TD.CellElementBase,
+TD.CellElementEffectiveBase,
+TD.CellElementUnweightedBase
+{
+    FONT-WEIGHT: bold;
+}
+TD.CellItemCount,
+TD.CellItemUnweightedCounts,
+TD.CellItemSum,
+TD.CellItemMinimum,
+TD.CellItemMaximum,
+TD.CellItemMean,
+TD.CellItemRange,
+TD.CellItemMode,
+TD.CellItemMedian,
+TD.CellItemPercentile,
+TD.CellItemStdDev,
+TD.CellItemStdErr,
+TD.CellItemVariance,
+TD.CellItemResiduals,
+TD.CellItemAdjustedResiduals,
+TD.CellItemExpectedValues,
+TD.CellItemValidN,
+TD.CellItemIndices,
+TD.CellItemColPropResults,
+TD.CellItemColBase,
+TD.CellItemRowBase
+{
+}
+TD.CellItemColPercent,
+TD.CellItemRowPercent,
+TD.CellItemTotalPercent,
+TD.CellItemCumColPercent,
+TD.CellItemCumRowPercent
+{
+   FONT-STYLE: italic; 
+}
+TD.CellItemProfileResult
+{
+    TEXT-ALIGN: left;
+    VERTICAL-ALIGN: top;
+    WIDTH: auto;
+}
+
+TD.Axis
+{
+    PADDING-TOP: 1px;
+    PADDING-RIGHT: 2px;
+    PADDING-LEFT:2px;
+    BORDER-RIGHT: black 1pt solid;
+    BORDER-TOP: black 1pt solid;
+    BORDER-LEFT: black 1pt solid;
+    BORDER-BOTTOM: black 1pt solid;
+    FONT-WEIGHT: normal;
+    FONT-SIZE: 8pt;
+    FONT-STYLE: normal;
+    FONT-FAMILY: Arial, sans-serif;
+    COLOR: windowtext;
+    VERTICAL-ALIGN: middle;
+    TEXT-ALIGN: center;
+    TEXT-DECORATION: none;
+    BACKGROUND: #ffffcc;
+}
+TD.AxisLabelTop
+{
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 11pt;
+    FONT-STYLE: normal;
+    FONT-FAMILY: Arial, sans-serif;
+}
+TD.AxisLabelSide
+{
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 11pt;
+    FONT-STYLE: normal;
+    FONT-FAMILY: Arial, sans-serif;
+    WRITING-MODE: tb-rl;
+}
+TD.AxisLabelHorizontalSide
+{
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 11pt;
+    FONT-STYLE: normal;
+    FONT-FAMILY: Arial, sans-serif;
+    TEXT-ALIGN: left;
+}
+TD.AxisLabelIndentSide
+{
+}
+TD.AxisElementTop
+{
+    FONT-WEIGHT: normal;
+    FONT-SIZE: 9pt;
+    FONT-STYLE: normal;
+    FONT-FAMILY: Arial, sans-serif;
+}
+TD.AxisElementSide
+{
+    FONT-WEIGHT: normal;
+    FONT-SIZE: 9pt;
+    FONT-STYLE: normal;
+    FONT-FAMILY: Arial, sans-serif;
+    TEXT-ALIGN: left;
+}
+TD.AxisSubElementLevel1Top
+{
+    FONT-WEIGHT: normal;
+    FONT-SIZE: 8pt;
+    FONT-STYLE: italic;
+    FONT-FAMILY: Arial, sans-serif;
+}
+TD.AxisSubElementLevel2Top
+{
+    FONT-WEIGHT: normal;
+    FONT-SIZE: 7pt;
+    FONT-STYLE: normal;
+    FONT-FAMILY: Arial, sans-serif;
+}
+TD.AxisSubElementLevel3Top
+{
+    FONT-WEIGHT: normal;
+    FONT-SIZE: 7pt;
+    FONT-STYLE: italic;
+    FONT-FAMILY: Arial, sans-serif;
+}
+TD.AxisSubElementLevel4Top
+{
+    FONT-WEIGHT: normal;
+    FONT-SIZE: 6pt;
+    FONT-STYLE: normal;
+    FONT-FAMILY: Arial, sans-serif;
+}
+TD.AxisSubElementLevel5Top
+{
+    FONT-WEIGHT: normal;
+    FONT-SIZE: 6pt;
+    FONT-STYLE: italic;
+    FONT-FAMILY: Arial, sans-serif;
+}
+TD.AxisSubElementLevel1Side
+{
+    FONT-WEIGHT: normal;
+    FONT-SIZE: 8pt;
+    FONT-STYLE: italic;
+    FONT-FAMILY: Arial, sans-serif;
+    TEXT-ALIGN: left;
+    PADDING-LEFT:10px;
+}
+TD.AxisSubElementLevel2Side
+{
+    FONT-WEIGHT: normal;
+    FONT-SIZE: 7pt;
+    FONT-STYLE: normal;
+    FONT-FAMILY: Arial, sans-serif;
+    TEXT-ALIGN: left;
+    PADDING-LEFT:20px;
+}
+TD.AxisSubElementLevel3Side
+{
+    FONT-WEIGHT: normal;
+    FONT-SIZE: 7pt;
+    FONT-STYLE: italic;
+    FONT-FAMILY: Arial, sans-serif;
+    TEXT-ALIGN: left;
+    PADDING-LEFT:30px;
+}
+TD.AxisSubElementLevel4Side
+{
+    FONT-WEIGHT: normal;
+    FONT-SIZE: 6pt;
+    FONT-STYLE: normal;
+    FONT-FAMILY: Arial, sans-serif;
+    TEXT-ALIGN: left;
+    PADDING-LEFT:40px;
+}
+TD.AxisSubElementLevel5Side
+{
+    FONT-WEIGHT: normal;
+    FONT-SIZE: 6pt;
+    FONT-STYLE: italic;
+    FONT-FAMILY: Arial, sans-serif;
+    TEXT-ALIGN: left;
+    PADDING-LEFT:50px;
+}
+TD.AxisElementCategory,
+TD.AxisElementTableStatistic,
+TD.AxisElementMean,
+TD.AxisElementStdDev,
+TD.AxisElementStdErr,
+TD.AxisElementSampleVar,
+TD.AxisElementTotal,
+TD.AxisElementSubTotal,
+TD.AxisElementText,
+TD.AxisElementNetDiffs,
+TD.AxisElementPairedPrefs,
+TD.AxisElementMinimum,
+TD.AxisElementMaximum,
+TD.AxisElementOtherDerived,
+TD.AxisElementNet,
+TD.AxisElementCombine,
+TD.AxisElementExpression,
+TD.AxisElementNumeric,
+TD.AxisElementDerived,
+TD.AxisElementSum,
+TD.AxisElementMedian,
+TD.AxisElementPercentile,
+TD.AxisElementMode,
+TD.AxisElementProfile,
+TD.AxisElementProfileResult,
+TD.AxisElementTValue,
+TD.AxisElementTProb
+{
+}
+TD.AxisElementBase,
+TD.AxisElementEffectiveBase,
+TD.AxisElementUnweightedBase
+{
+    FONT-WEIGHT: bold;
+}
+
+TD.AxisColumnHeading
+{
+    FONT-WEIGHT: bold;
+}
+
+TD.AxisElementSortedOn
+{
+}
+
+TD.TableOfContents
+{
+    PADDING-TOP: 2px;
+    PADDING-RIGHT: 2px;
+    PADDING-LEFT:2px;
+    BORDER: black 0.5pt solid;
+    FONT-WEIGHT: normal;
+    FONT-SIZE: 8pt;
+    FONT-STYLE: normal;
+    FONT-FAMILY: Arial, sans-serif;
+    COLOR: windowtext;
+    VERTICAL-ALIGN: middle;
+    TEXT-ALIGN: left;
+    TEXT-DECORATION: none;
+    BACKGROUND: #ffffcc;
+}
+TD.TableOfContentsTitle
+{
+    PADDING-TOP: 2px;
+    PADDING-RIGHT: 2px;
+    PADDING-LEFT:2px;
+    BORDER: black 0.5pt solid;
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 8pt;
+    FONT-STYLE: normal;
+    FONT-FAMILY: Arial, sans-serif;
+    COLOR: windowtext;
+    VERTICAL-ALIGN: middle;
+    TEXT-ALIGN: left;
+    TEXT-DECORATION: none;
+    BACKGROUND: #ffffaa;
+}
+
+TD.Annotation
+{
+    VERTICAL-ALIGN: top;
+    FONT-WEIGHT: normal;
+    FONT-SIZE: 10pt;
+    FONT-STYLE: normal;
+    FONT-FAMILY: Arial, sans-serif;
+}
+TD.TitleHeader
+{
+    TEXT-ALIGN: left;
+    FONT-SIZE: 12pt;
+    FONT-WEIGHT: bold;
+}
+TD.LeftHeader
+{
+    WIDTH: 30%;
+    TEXT-ALIGN: left;
+}
+TD.CenterHeader
+{
+    WIDTH: 40%;
+    TEXT-ALIGN: center;
+}
+TD.RightHeader
+{
+    WIDTH: 30%;
+    TEXT-ALIGN: right;
+}
+TD.TitleFooter
+{
+    TEXT-ALIGN: left;
+    FONT-SIZE: 10pt;
+    FONT-WEIGHT: bold;
+}
+TD.LeftFooter
+{
+    WIDTH: 30%;
+    TEXT-ALIGN: left;
+}
+TD.CenterFooter
+{
+    WIDTH: 40%;
+    TEXT-ALIGN: center;
+}
+TD.RightFooter
+{
+    WIDTH: 30%;
+    TEXT-ALIGN: right;
+}
+
+A.TopLink
+{
+    FONT-WEIGHT: normal;
+    FONT-SIZE: 6pt;
+    FONT-STYLE: normal;
+    FONT-FAMILY: Arial, sans-serif;
+}
+
+H1.SurveyName
+{
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 12pt;
+    FONT-STYLE: normal;
+    FONT-FAMILY: Arial, sans-serif;
+}
+H1.SurveyDescription
+{
+    FONT-WEIGHT: normal;
+    FONT-SIZE: 12pt;
+    FONT-STYLE: normal;
+    FONT-FAMILY: Arial, sans-serif;
+}
+
+IMG.TableImage
+{
+    BACKGROUND-COLOR: white;
+    BORDER: black 0.5pt solid;
+}
+
+IMG.TableLogo
+{
+    BACKGROUND-COLOR: transparent;
+}
+
+.HorizontalSpacer
+{
+    HEIGHT: 5px
+}
+.VerticalSpacer
+{
+    WIDTH: 5px
+}-->
+			</style>
+		</head>
+		<body>
+			<table width="1024" height="100%" align="left" valign="top" border="0" cellpadding="0" cellspacing="0">
+				<tr>
+					<td align="left" valign="top">
+						<H1 class="SurveyName"></H1>
+						<H1 class="SurveyDescription"></H1>
+						<table>
+							<tr>
+								<td class="Annotation">Table of Contents:</td>
+							</tr>
+						</table>
+						<table cellpadding="0" cellspacing="0">
+							<tr>
+								<td class="TableOfContentsTitle"></td>
+								<td class="TableOfContentsTitle">Table Description</td>
+								<td class="TableOfContentsTitle">Filter Description</td>
+								<td class="TableOfContentsTitle">Population Status</td>
+								<td class="TableOfContentsTitle">Base</td>
+							</tr>
+							<tr>
+								<td class="TableOfContents">
+									<A HREF="std_BoroID_Val.htm" TARGET="Table">1</A>
+								</td>
+								<td class="TableOfContents">
+									<A HREF="std_BoroID_Val.htm" TARGET="Table">Borough. Borough</A>
+								</td>
+								<td class="TableOfContents"></td>
+								<td class="TableOfContents">Success</td>
+								<td class="TableOfContents">1692389</td>
+							</tr>
+							<tr>
+								<td class="TableOfContents">
+									<A HREF="std_BoroID_Time_Val.htm" TARGET="Table">2</A>
+								</td>
+								<td class="TableOfContents">
+									<A HREF="std_BoroID_Time_Val.htm" TARGET="Table">Borough. Borough By Inspection Time</A>
+								</td>
+								<td class="TableOfContents"></td>
+								<td class="TableOfContents">Success</td>
+								<td class="TableOfContents">1692389</td>
+							</tr>
+							<tr>
+								<td class="TableOfContents">
+									<A HREF="std_DateEntered_YYYY_Val.htm" TARGET="Table">3</A>
+								</td>
+								<td class="TableOfContents">
+									<A HREF="std_DateEntered_YYYY_Val.htm" TARGET="Table">DateEntered. Date Entered Reporting in YYYY</A>
+								</td>
+								<td class="TableOfContents"></td>
+								<td class="TableOfContents">Success</td>
+								<td class="TableOfContents">1692389</td>
+							</tr>
+							<tr>
+								<td class="TableOfContents">
+									<A HREF="std_DateEntered_YYYY2_Val.htm" TARGET="Table">4</A>
+								</td>
+								<td class="TableOfContents">
+									<A HREF="std_DateEntered_YYYY2_Val.htm" TARGET="Table">DateEntered. Date Entered By Inspection Time</A>
+								</td>
+								<td class="TableOfContents"></td>
+								<td class="TableOfContents">Success</td>
+								<td class="TableOfContents">1692389</td>
+							</tr>
+							<tr>
+								<td class="TableOfContents">
+									<A HREF="std_Status_Val.htm" TARGET="Table">5</A>
+								</td>
+								<td class="TableOfContents">
+									<A HREF="std_Status_Val.htm" TARGET="Table">Status_Val. Status_Val</A>
+								</td>
+								<td class="TableOfContents"></td>
+								<td class="TableOfContents">Success</td>
+								<td class="TableOfContents">1692389</td>
+							</tr>
+							<tr>
+								<td class="TableOfContents">
+									<A HREF="std_Status2_Val.htm" TARGET="Table">6</A>
+								</td>
+								<td class="TableOfContents">
+									<A HREF="std_Status2_Val.htm" TARGET="Table">Status_Val. Status By Inspection Time</A>
+								</td>
+								<td class="TableOfContents"></td>
+								<td class="TableOfContents">Success</td>
+								<td class="TableOfContents">1692389</td>
+							</tr>
+							<tr>
+								<td class="TableOfContents">
+									<A HREF="std_ComplaintCategory.htm" TARGET="Table">7</A>
+								</td>
+								<td class="TableOfContents">
+									<A HREF="std_ComplaintCategory.htm" TARGET="Table">ComplaintCategory. ComplaintCategory_Val</A>
+								</td>
+								<td class="TableOfContents"></td>
+								<td class="TableOfContents">Success</td>
+								<td class="TableOfContents">1692389</td>
+							</tr>
+							<tr>
+								<td class="TableOfContents">
+									<A HREF="std_ComplaintCategory2.htm" TARGET="Table">8</A>
+								</td>
+								<td class="TableOfContents">
+									<A HREF="std_ComplaintCategory2.htm" TARGET="Table">ComplaintCategory. Complaint Category By Inspection Time</A>
+								</td>
+								<td class="TableOfContents"></td>
+								<td class="TableOfContents">Success</td>
+								<td class="TableOfContents">1692389</td>
+							</tr>
+							<tr>
+								<td class="TableOfContents">
+									<A HREF="std_ManagementProgram_Val.htm" TARGET="Table">9</A>
+								</td>
+								<td class="TableOfContents">
+									<A HREF="std_ManagementProgram_Val.htm" TARGET="Table">ManagementProgram. ManagementProgram_Val</A>
+								</td>
+								<td class="TableOfContents"></td>
+								<td class="TableOfContents">Success</td>
+								<td class="TableOfContents">1155449</td>
+							</tr>
+							<tr>
+								<td class="TableOfContents">
+									<A HREF="std_ManagementProgram2_Val.htm" TARGET="Table">10</A>
+								</td>
+								<td class="TableOfContents">
+									<A HREF="std_ManagementProgram2_Val.htm" TARGET="Table">ManagementProgram. Management Program By Inspection Time</A>
+								</td>
+								<td class="TableOfContents"></td>
+								<td class="TableOfContents">Success</td>
+								<td class="TableOfContents">1155449</td>
+							</tr>
+							<tr>
+								<td class="TableOfContents">
+									<A HREF="std_T500_BIN.htm" TARGET="Table">11</A>
+								</td>
+								<td class="TableOfContents">
+									<A HREF="std_T500_BIN.htm" TARGET="Table">T500_BIN. T500_BIN</A>
+								</td>
+								<td class="TableOfContents"></td>
+								<td class="TableOfContents">Success</td>
+								<td class="TableOfContents">93228</td>
+							</tr>
+							<tr>
+								<td class="TableOfContents">
+									<A HREF="std_T500_BIN2.htm" TARGET="Table">12</A>
+								</td>
+								<td class="TableOfContents">
+									<A HREF="std_T500_BIN2.htm" TARGET="Table">T500_BIN. Top 500 BIN By Inspection Time</A>
+								</td>
+								<td class="TableOfContents"></td>
+								<td class="TableOfContents">Success</td>
+								<td class="TableOfContents">93228</td>
+							</tr>
+							<tr>
+								<td class="TableOfContents">
+									<A HREF="std_ITIME.htm" TARGET="Table">13</A>
+								</td>
+								<td class="TableOfContents">
+									<A HREF="std_ITIME.htm" TARGET="Table">IT. Mean Inspection Time In Days</A>
+								</td>
+								<td class="TableOfContents"></td>
+								<td class="TableOfContents">Success</td>
+								<td class="TableOfContents">1280514</td>
+							</tr>
+							<tr>
+								<td class="TableOfContents">
+									<A HREF="std_ComplaintCategory3.htm" TARGET="Table">14</A>
+								</td>
+								<td class="TableOfContents">
+									<A HREF="std_ComplaintCategory3.htm" TARGET="Table">ComplaintCategory. Complaint Category By Management Program</A>
+								</td>
+								<td class="TableOfContents"></td>
+								<td class="TableOfContents">Success</td>
+								<td class="TableOfContents">1692389</td>
+							</tr>
+							<tr>
+								<td class="TableOfContents">
+									<A HREF="Variable_Profile.htm" TARGET="Table">15</A>
+								</td>
+								<td class="TableOfContents">
+									<A HREF="Variable_Profile.htm" TARGET="Table">BIN Profile</A>
+								</td>
+								<td class="TableOfContents"></td>
+								<td class="TableOfContents">Success</td>
+								<td class="TableOfContents">10000</td>
+							</tr>
+							<tr>
+								<td class="TableOfContents">
+									<A HREF="Variable_Profile_T500.htm" TARGET="Table">16</A>
+								</td>
+								<td class="TableOfContents">
+									<A HREF="Variable_Profile_T500.htm" TARGET="Table">BIN Profile [Filtered on Top 500 BIN]</A>
+								</td>
+								<td class="TableOfContents">T500_BIN is not null</td>
+								<td class="TableOfContents">Success</td>
+								<td class="TableOfContents">10000</td>
+							</tr>
+							<tr>
+								<td class="TableOfContents">
+									<A HREF="Variable_Profile_T500_Closed.htm" TARGET="Table">17</A>
+								</td>
+								<td class="TableOfContents">
+									<A HREF="Variable_Profile_T500_Closed.htm" TARGET="Table">BIN Profile [Filtered on Top 500 BIN and Incident Closed]</A>
+								</td>
+								<td class="TableOfContents">(T500_BIN is not null) and Status_Val.ContainsAny({Closed})</td>
+								<td class="TableOfContents">Success</td>
+								<td class="TableOfContents">10000</td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+			</table>
+		</body>
+	</html>
